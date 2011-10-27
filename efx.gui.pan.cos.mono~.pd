@@ -12,7 +12,7 @@
 #X obj 427 199 *~ 0.25;
 #X obj 428 227 -~ 0.25;
 #X obj 324 265 -~ 0.25;
-#X obj 100 117 gui.slider pan 0 1;
+#X obj 100 117 gui.slider pan 1 0;
 #X obj 111 47 r \$1/cos.pan;
 #X obj 100 100 cnv 15 156 15 empty empty Pan.cos.mono 5 8 0 8 -1 -162280
 0;

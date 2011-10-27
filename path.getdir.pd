@@ -1,4 +1,4 @@
-#N canvas 497 245 291 165 10;
+#N canvas 503 268 291 165 10;
 #X obj 73 60 getdir;
 #X obj 73 35 loadbang;
 #X obj 73 83 outlet;

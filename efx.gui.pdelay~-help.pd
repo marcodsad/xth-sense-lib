@@ -1,10 +1,6 @@
-#N canvas 631 211 615 534 10;
-#X declare -lib pdmtl;
-#X declare -lib sssad-lib;
+#N canvas 637 234 615 534 10;
 #X declare -lib soundhack;
 #X declare -lib xthsense;
-#X obj 204 334 import pdmtl;
-#X obj 284 334 import sssad-lib;
 #X text 201 248 I/O;
 #X obj -1 470 dac~;
 #X obj -2 333 mix.ch.stereo~;
@@ -21,15 +17,15 @@
 #X text 192 170 http://www.soundhack.com/externs.php;
 #X text 191 103 GOP and sssad wrap for [+pitchdelay~] \, included in
 ;
-#X text 200 302 Needs pdmtl \, sssad-lib \, soundhack;
-#X obj 388 334 import soundhack;
+#X obj 200 323 import soundhack;
 #X obj 482 498 import xthsense;
-#X connect 4 0 3 0;
-#X connect 4 1 3 1;
-#X connect 5 0 4 0;
-#X connect 5 0 4 1;
-#X connect 6 0 9 0;
-#X connect 7 0 9 1;
-#X connect 8 0 7 0;
-#X connect 9 0 5 0;
+#X text 199 302 Needs soundhack;
+#X connect 2 0 1 0;
+#X connect 2 1 1 1;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 7 0;
+#X connect 5 0 7 1;
+#X connect 6 0 5 0;
+#X connect 7 0 3 0;
 #X coords 0 0 1 1 157 117 0;
