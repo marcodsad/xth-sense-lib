@@ -1,4 +1,4 @@
-#N canvas 608 274 738 561 10;
+#N canvas 614 281 738 561 10;
 #X obj -127 99 inlet~;
 #N canvas 825 162 610 447 dsp 0;
 #X obj 46 30 inlet~;
@@ -111,12 +111,12 @@ second etc) with just intonation ratios in between.;
 #X obj 100 100 cnv 15 156 15 empty empty Pdelay 5 8 0 8 -1 -162280
 0;
 #X obj -128 210 mix.wet~;
-#X obj 304 234 sssad \$1/pdel.time;
-#X obj 305 254 sssad \$1/pdel.fact;
-#X obj 305 273 sssad \$1/pdel.depth;
-#X obj 305 293 sssad \$1/pdel.fdb;
-#X obj 306 313 sssad \$1/pdel.oct;
-#X obj 306 333 sssad \$1/pdel.mix;
+#X obj 304 234 xsssad \$1/pdel.time;
+#X obj 305 254 xsssad \$1/pdel.fact;
+#X obj 305 272 xsssad \$1/pdel.depth;
+#X obj 305 293 xsssad \$1/pdel.fdb;
+#X obj 306 313 xsssad \$1/pdel.oct;
+#X obj 306 333 xsssad \$1/pdel.mix;
 #X connect 0 0 1 0;
 #X connect 0 0 30 0;
 #X connect 1 0 30 1;

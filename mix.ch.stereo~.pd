@@ -1,4 +1,4 @@
-#N canvas 220 63 441 779 10;
+#N canvas 226 63 441 779 10;
 #X obj 20 503 *~;
 #X obj 196 83 cnv 15 45 119 empty empty empty 20 12 0 14 -133153 -262144
 0;
@@ -53,7 +53,7 @@
 #X obj 308 67 s \$0-dsp;
 #X obj 220 425 r \$0-dsp;
 #X obj 281 40 t f f;
-#X obj 315 104 r \$0-dsp;
+#X obj 318 104 r \$0-dsp;
 #X obj 308 176 s \$0-dsp;
 #X obj 220 450 t f f;
 #X obj 247 281 s \$0-dsp;
@@ -64,7 +64,6 @@
 #X obj 81 -17 r \$1/vol;
 #X obj 81 7 scale.lin 1 0 127;
 #X obj 281 153 t f f;
-#X obj 281 128 sssad \$1/vol;
 #N canvas 385 100 627 491 animation 0;
 #X obj 282 42 inlet;
 #X obj 56 41 inlet~;
@@ -209,13 +208,14 @@
 #X connect 17 1 12 0;
 #X connect 17 2 10 0;
 #X restore 178 558 pd animation;
+#X obj 281 128 xsssad \$1/vol;
 #X connect 0 0 10 0;
-#X connect 0 0 37 0;
+#X connect 0 0 36 0;
 #X connect 4 0 29 0;
 #X connect 7 0 0 0;
 #X connect 8 0 9 0;
 #X connect 9 0 11 0;
-#X connect 9 0 37 1;
+#X connect 9 0 36 1;
 #X connect 14 0 15 0;
 #X connect 15 0 30 0;
 #X connect 16 0 17 1;
@@ -226,9 +226,9 @@
 #X connect 23 0 27 0;
 #X connect 24 0 4 0;
 #X connect 24 1 22 0;
-#X connect 25 0 36 1;
+#X connect 25 0 37 1;
 #X connect 27 0 21 0;
-#X connect 27 1 37 2;
+#X connect 27 1 36 2;
 #X connect 29 0 13 0;
 #X connect 29 1 31 0;
 #X connect 30 0 32 0;
@@ -239,5 +239,5 @@
 #X connect 34 0 4 0;
 #X connect 35 0 4 0;
 #X connect 35 1 26 0;
-#X connect 36 0 35 0;
+#X connect 37 0 35 0;
 #X coords 0 -1 1 1 45 126 2 196 83;

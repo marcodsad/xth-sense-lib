@@ -1,4 +1,4 @@
-#N canvas 688 218 766 525 10;
+#N canvas 700 264 766 525 10;
 #X obj 100 100 cnv 15 125 20 empty empty empty 20 12 0 14 -133153 -66577
 0;
 #X obj 102 103 hradio 15 1 0 4 empty empty -- 6 8 0 8 -1 -1 -262144
@@ -117,7 +117,7 @@
 #X obj 332 320 t s s s;
 #X obj 560 245 pipe s 700;
 #X obj 203 36 pipe 750;
-#N canvas 319 247 907 350 route.and.parse.OSC 1;
+#N canvas 319 247 907 350 route.and.parse.OSC 0;
 #X obj 46 225 OSC.path.merge /wp1;
 #X obj 81 205 OSC.path.merge /wp2;
 #X obj 259 104 OSC.path.merge /wp7;
@@ -178,8 +178,6 @@
 #X connect 19 0 11 0;
 #X connect 20 0 11 0;
 #X restore 365 189 pd route.and.parse.OSC;
-#X obj 560 208 sssad \$1/paramout;
-#X obj 203 10 sssad \$1/paramoff;
 #X obj 504 365 print;
 #X text 400 -30 1_ receives a lists (including the object arguments)
 ;
@@ -187,6 +185,8 @@
 the list into a symbol;
 #X text 402 26 3_ store the symbol;
 #X text 402 49 4_ when prompted \, it feed the symbol to [iem_s];
+#X obj 203 10 xsssad \$1/paramoff;
+#X obj 560 208 xsssad \$1/paramout;
 #X connect 2 0 27 0;
 #X connect 3 0 24 0;
 #X connect 4 0 19 0;
@@ -202,18 +202,18 @@ the list into a symbol;
 #X connect 15 1 3 0;
 #X connect 17 0 22 0;
 #X connect 18 0 1 0;
-#X connect 19 0 29 1;
+#X connect 19 0 33 1;
 #X connect 19 2 17 1;
 #X connect 19 3 15 0;
 #X connect 20 0 17 0;
 #X connect 23 0 22 1;
-#X connect 24 0 28 1;
+#X connect 24 0 34 1;
 #X connect 24 1 21 0;
 #X connect 24 2 23 0;
 #X connect 25 0 27 0;
 #X connect 26 0 4 0;
 #X connect 27 0 3 1;
 #X connect 27 1 3 1;
-#X connect 28 0 25 0;
-#X connect 29 0 26 0;
+#X connect 33 0 26 0;
+#X connect 34 0 25 0;
 #X coords 0 -1 1 1 125 20 2 100 100;

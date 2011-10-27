@@ -1,4 +1,4 @@
-#N canvas 601 202 655 378 10;
+#N canvas 607 225 655 378 10;
 #X declare -lib mrpeach;
 #X obj 253 43 inlet~;
 #X obj 7 -105 r \$0-labels;
@@ -121,10 +121,10 @@
 #X obj 0 51 gui.slider depth 1 0;
 #X obj 0 68 gui.slider mix 1 0;
 #X obj 0 0 cnv 15 156 15 empty empty Chorus 5 8 0 8 -1 -162280 0;
-#X obj 1 128 sssad \$1/cho.fb;
-#X obj 0 153 sssad \$1/cho.rate;
-#X obj 0 176 sssad \$1/cho.depth;
-#X obj -1 199 sssad \$1/cho.mix;
+#X obj 1 128 xsssad \$1/cho.fb;
+#X obj 0 153 xsssad \$1/cho.rate;
+#X obj 0 176 xsssad \$1/cho.depth;
+#X obj -1 199 xsssad \$1/cho.mix;
 #X connect 0 0 3 0;
 #X connect 0 0 19 0;
 #X connect 0 0 19 1;
@@ -149,8 +149,8 @@
 #X connect 21 1 26 1;
 #X connect 22 0 8 0;
 #X connect 22 1 27 1;
-#X connect 23 1 28 1;
 #X connect 23 1 5 0;
+#X connect 23 1 28 1;
 #X connect 25 0 20 0;
 #X connect 26 0 21 0;
 #X connect 27 0 22 0;

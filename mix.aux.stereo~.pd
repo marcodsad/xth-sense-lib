@@ -1,4 +1,4 @@
-#N canvas 238 356 450 486 10;
+#N canvas 244 356 450 486 10;
 #X obj 102 100 nbx 3 15 0 100 0 0 empty empty empty 0 -8 0 8 -1 -262144
 -1 0 256;
 #X obj 145 269 inlet~;
@@ -29,7 +29,7 @@
 #X obj 141 180 scale.lin 1 0 100;
 #X obj 141 201 t f f f;
 #X obj 102 122 t f f f;
-#X obj -21 122 sssad \$1/wet;
+#X obj -21 122 xsssad \$1/wet;
 #X connect 0 0 13 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;

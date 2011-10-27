@@ -1,4 +1,4 @@
-#N canvas 671 311 798 442 10;
+#N canvas 677 334 798 442 10;
 #X obj -31 90 inlet~;
 #X obj -29 182 outlet~;
 #X text 99 269 Marco Donnarumma :: devel@thesaddj.com :: Edinburgh
@@ -52,9 +52,9 @@
 #X obj 100 100 cnv 15 156 15 empty empty Delay 5 8 0 8 -1 -162280 0
 ;
 #X obj -30 149 mix.wet~;
-#X obj 251 183 sssad \$1/del.del;
-#X obj 250 206 sssad \$1/del.fb;
-#X obj 250 231 sssad \$1/del.mix;
+#X obj 251 183 xsssad \$1/del.del;
+#X obj 250 206 xsssad \$1/del.fb;
+#X obj 250 230 xsssad \$1/del.mix;
 #X connect 0 0 3 0;
 #X connect 0 0 19 0;
 #X connect 3 0 19 1;

@@ -1,4 +1,4 @@
-#N canvas 782 125 747 446 10;
+#N canvas 788 148 747 446 10;
 #X obj -126 77 inlet~;
 #X obj -105 99 inlet~;
 #N canvas 73 175 610 557 dsp 0;
@@ -78,7 +78,7 @@
 #X obj 101 185 cnv 15 155 15 \$0-record empty empty 20 12 0 14 -1 -228856
 0;
 #X obj 102 185 tgl 15 0 \$0-start.rnd empty empty 17 7 0 10 -191407
--1 -1 110.323 110.323;
+-1 -1 0 110.323;
 #X obj 340 173 s \$0-mix;
 #X obj 339 152 s \$0-pitch;
 #X obj -128 230 *~ 1.2;
@@ -103,11 +103,11 @@
 #X obj 100 100 cnv 15 156 15 empty empty Grunger 5 8 0 8 -1 -162280
 0;
 #X obj -127 192 mix.wet.stereo~;
-#X obj 273 225 sssad \$1/gru.filt;
-#X obj 272 249 sssad \$1/gru.q.filt;
-#X obj 272 273 sssad \$1/gru.pitch;
-#X obj 272 297 sssad \$1/gru.mix;
-#X obj 273 321 sssad \$1/gru.mix;
+#X obj 273 225 xsssad \$1/gru.filt;
+#X obj 272 249 xsssad \$1/gru.q.filt;
+#X obj 272 273 xsssad \$1/gru.pitch;
+#X obj 272 297 xsssad \$1/gru.mix;
+#X obj 273 321 xsssad \$1/gru.mix;
 #X connect 0 0 2 0;
 #X connect 0 0 31 0;
 #X connect 1 0 2 1;
