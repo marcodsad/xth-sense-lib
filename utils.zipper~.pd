@@ -1,0 +1,8 @@
+#N canvas 308 354 450 300 10;
+#X obj 126 85 sig~;
+#X obj 126 212 outlet~ signal control;
+#X obj 126 21 inlet numerical value;
+#X obj 125 177 lop~ 1;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;

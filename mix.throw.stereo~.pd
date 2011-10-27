@@ -1,0 +1,7 @@
+#N canvas 579 383 319 117 10;
+#X obj 79 69 throw~ \$1_l;
+#X obj 170 69 throw~ \$1_r;
+#X obj 79 30 inlet~;
+#X obj 169 30 inlet~;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;

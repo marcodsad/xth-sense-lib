@@ -1,0 +1,16 @@
+#N canvas 710 343 450 300 10;
+#X obj 102 52 inlet~;
+#X obj 102 148 *~;
+#X obj 102 230 outlet~;
+#X obj 217 54 f \$1;
+#X obj 217 30 loadbang;
+#X obj 161 53 inlet;
+#X obj 161 79 == 1;
+#X obj 161 107 utils.zipper~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 1;

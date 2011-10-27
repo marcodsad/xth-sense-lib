@@ -1,0 +1,4 @@
+#N canvas 541 379 664 459 10;
+#X obj 34 -167 timebase;
+#X obj 34 -80 seq.er3;
+#X connect 0 0 1 0;

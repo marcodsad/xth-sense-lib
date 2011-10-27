@@ -1,0 +1,15 @@
+#N canvas 680 444 399 332 10;
+#X declare -lib xthsense;
+#X obj 42 40 gui.bng.box Test;
+#X obj 42 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 153 28 GUI box to be banged!;
+#X text 151 58 ARGUMENT;
+#X text 153 128 INLET;
+#X text 152 74 Label;
+#X text 153 145 Label;
+#X text 153 210 Bang;
+#X text 152 194 OUTLET;
+#X obj 259 284 import xthsense;
+#X connect 0 0 1 0;
+#X coords 0 0 1 1 65 25 0;

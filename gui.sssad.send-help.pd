@@ -1,0 +1,15 @@
+#N canvas 694 241 766 296 10;
+#X declare -lib sssad-lib;
+#X declare -lib xthsense;
+#X text 258 89 1_ receives a lists (including the object arguments)
+;
+#X text 259 110 2_ parse the list: take out the argument and transform
+the list into a symbol;
+#X text 260 145 3_ store the symbol;
+#X text 260 168 4_ when prompted \, it feed the symbol to [iem_s];
+#X obj 56 31 gui.sssad.send;
+#X text 259 24 Xth Sense internal dynamic sender for data mapping;
+#X text 259 43 Needs sssad;
+#X obj 343 46 import sssad-lib;
+#X obj 625 247 import xthsense;
+#X coords 0 0 1 1 125 20 0;

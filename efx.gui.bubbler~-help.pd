@@ -1,0 +1,31 @@
+#N canvas 66 246 664 436 10;
+#X declare -lib pdmtl;
+#X declare -lib sssad-lib;
+#X declare -lib soundhack;
+#X declare -lib xthsense;
+#X text 237 23 GOP and sssad wrap for [+bubbler] \, included in;
+#X text 238 37 Soundhack modules ported to Pd by:;
+#X text 237 51 Tom Erbe \, William Brent \, Daniel Arias \,;
+#X text 238 65 Bryan Oczkowsky \, Trevor LeVieux.;
+#X text 238 90 http://www.soundhack.com/externs.php;
+#X obj 28 59 efx.gui.bubbler~;
+#X obj 245 362 import pdmtl;
+#X obj 325 362 import sssad-lib;
+#X obj 429 362 import soundhack;
+#X text 235 155 This is a delay using granular synthesis. Small clips
+(grains) of audio are read and re-ordered before being sent to the
+delay output. Various parameters such as playback direction and pitch
+of each grain can be controlled.;
+#X text 241 330 Needs pdmtl \, sssad-lib \, soundhack;
+#X text 238 129 From the original help file:;
+#X obj 29 19 osc~ 200;
+#X obj 30 396 dac~;
+#X text 241 264 I/O;
+#X text 241 282 Mono > Mono;
+#X obj 29 259 mix.ch.stereo~;
+#X obj 560 410 import xthsense;
+#X connect 5 0 16 0;
+#X connect 5 0 16 1;
+#X connect 12 0 5 0;
+#X connect 16 0 13 0;
+#X connect 16 1 13 1;

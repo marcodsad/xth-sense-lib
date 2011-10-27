@@ -1,0 +1,71 @@
+#N canvas 428 114 1120 526 10;
+#X obj 24 265 inlet~;
+#X obj 379 122 f 0;
+#X obj 414 118 + 1;
+#X msg 328 382 start;
+#X msg 277 383 stop;
+#X obj 716 265 outlet number written;
+#X text 445 448 << the argument 1 means it will record a single channel
+file (mono).;
+#X text 568 130 << each bang here increment a counter and the value
+of this is appended to the current file name using [makefilename] which
+can substitute numerical values into a string like the C _printf_ statement
+does.;
+#X text 519 75 << takes the 2nd argument given in the abstraction to
+write the file into the right folder;
+#X text -124 187 as soon as the file is ready to be written a _start_
+message is sent to [writesf~] and a bang to the [delay] which waits
+for a period given by the first argument before stopping [writesf~]
+>>>;
+#X obj 277 13 inlet toggle;
+#X obj 277 40 route 0 1;
+#X obj 328 82 t b b;
+#X floatatom 379 79 5 0 0 0 - - -;
+#X msg 398 380 stop \, open -bytes 3 \$1;
+#X obj 496 48 path.getdir.parent;
+#X obj 451 2 loadbang;
+#X obj 451 149 mergefilename /;
+#X obj 451 101 pack s s;
+#X obj 451 27 t b b;
+#X obj 451 75 symbol \$1;
+#X msg 451 124 \$2 \$1;
+#X obj 418 181 symbol;
+#X obj 398 276 makefilename take-%d.wav;
+#X obj 398 248 f;
+#X obj 379 148 t f f b;
+#X obj 398 346 mergefilename /;
+#X obj 398 298 pack s s;
+#X msg 398 321 \$2 \$1;
+#X obj 418 210 makefilename %s;
+#X obj 277 446 writesf~ 1;
+#X connect 0 0 30 0;
+#X connect 1 0 2 0;
+#X connect 1 0 25 0;
+#X connect 2 0 1 1;
+#X connect 3 0 30 0;
+#X connect 4 0 30 0;
+#X connect 10 0 11 0;
+#X connect 11 0 4 0;
+#X connect 11 1 12 0;
+#X connect 12 0 3 0;
+#X connect 12 1 1 0;
+#X connect 13 0 1 0;
+#X connect 14 0 30 0;
+#X connect 15 0 18 1;
+#X connect 16 0 19 0;
+#X connect 17 0 22 1;
+#X connect 18 0 21 0;
+#X connect 19 0 20 0;
+#X connect 19 1 15 0;
+#X connect 20 0 18 0;
+#X connect 21 0 17 0;
+#X connect 22 0 29 0;
+#X connect 23 0 27 0;
+#X connect 24 0 23 0;
+#X connect 25 0 5 0;
+#X connect 25 1 24 0;
+#X connect 25 2 22 0;
+#X connect 26 0 14 0;
+#X connect 27 0 28 0;
+#X connect 28 0 26 0;
+#X connect 29 0 27 1;

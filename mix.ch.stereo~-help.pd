@@ -1,0 +1,24 @@
+#N canvas 774 309 580 415 10;
+#X declare -lib xthsense;
+#X text 164 57 An alternative GUI slider \, with display of incoming
+signal;
+#X text 164 77 Can use sssad (see inside the object);
+#X text 162 123 ARGUMENT;
+#X text 163 299 OUTLETS;
+#X text 164 193 INLETS;
+#X text 163 139 None;
+#X text 164 225 Stereo signal;
+#X text 162 208 Stereo signal;
+#X obj 50 64 osc~ 200;
+#X floatatom 89 101 5 0 1 0 - - -;
+#X obj 51 292 dac~;
+#X obj 51 142 mix.ch.stereo~;
+#X text 165 242 Float (between 0 and 1);
+#X text 164 330 Stereo signal;
+#X text 164 315 Stereo signal;
+#X obj 439 374 import xthsense;
+#X connect 8 0 11 0;
+#X connect 8 0 11 1;
+#X connect 9 0 11 2;
+#X connect 11 0 10 0;
+#X connect 11 1 10 1;

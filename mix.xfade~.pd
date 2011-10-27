@@ -1,0 +1,30 @@
+#N canvas 379 108 622 362 10;
+#X obj 27 37 inlet~ signal1;
+#X obj 138 38 inlet~ signal2;
+#X obj 28 203 *~;
+#X obj 139 205 *~;
+#X obj 70 247 outlet~;
+#X obj 154 99 sig~ 1;
+#X obj 153 166 -~;
+#X text 260 179 The opposite of a pan control \, a reverse panner if
+you like \, is a _crossfader_. When you want to smoothly transfer between
+two sound sources by mixing them to a common signal path. Just like
+the simple panner \, the control signal is split into two parts \,
+a direct version and the complement with each modulating an input signal.
+The output is the sum of both multipliers. This one is a linear crossfader
+\, but in some situations crossfades may be better with constant power
+fading done using sine or square root transfer functions.;
+#X obj 250 39 inlet xfade;
+#X obj 250 64 sig~;
+#X obj 250 88 lop~ 1;
+#X text 260 146 From "Designing Sound" by Andy Farnell;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 1;
+#X connect 10 0 2 1;

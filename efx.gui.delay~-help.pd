@@ -1,0 +1,29 @@
+#N canvas 40 376 633 416 10;
+#X declare -lib pdmtl;
+#X declare -lib sssad-lib;
+#X declare -lib xthsense;
+#X obj 203 187 import pdmtl;
+#X obj 283 187 import sssad-lib;
+#X text 200 101 I/O;
+#X obj 8 368 dac~;
+#X obj 7 231 mix.ch.stereo~;
+#X obj 6 137 efx.gui.delay~;
+#X text 199 64 GOP and sssad wrap for a simple feedback delay object
+;
+#X text 200 119 Mono > Mono;
+#X text 200 156 Needs pdmtl \, sssad-lib;
+#X obj 474 381 import xthsense;
+#X obj 5 23 osc~ 400;
+#X obj 76 45 gui.ead~;
+#X obj 76 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 6 107 *~;
+#X connect 4 0 3 0;
+#X connect 4 1 3 1;
+#X connect 5 0 4 0;
+#X connect 5 0 4 1;
+#X connect 10 0 13 0;
+#X connect 11 0 13 1;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X coords 0 0 1 1 156 66 0;

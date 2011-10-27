@@ -1,0 +1,31 @@
+#N canvas 689 291 634 441 10;
+#X declare -lib sssad-lib;
+#X declare -lib xthsense;
+#X obj 38 -129 efx.gui.granular.live~;
+#X obj 270 -141 import sssad-lib;
+#X text 269 -220 I/O;
+#X text 269 -202 Mono > Stereo;
+#X obj 40 129 dac~;
+#X obj 39 -8 mix.ch.stereo~;
+#X obj 37 -281 osc~ 400;
+#X obj 38 -230 *~;
+#X obj 75 -258 osc~ 420;
+#X obj 53 -203 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 53 -184 utils.zipper~;
+#X obj 37 -158 *~;
+#X text 267 -257 GOP and sssad wrap for real time granular synthesis
+;
+#X text 268 -167 Needs sssad-lib;
+#X obj 493 110 import xthsense;
+#X connect 0 0 5 0;
+#X connect 0 1 5 1;
+#X connect 5 0 4 0;
+#X connect 5 1 4 1;
+#X connect 6 0 7 0;
+#X connect 7 0 11 0;
+#X connect 8 0 7 1;
+#X connect 9 0 10 0;
+#X connect 10 0 11 1;
+#X connect 11 0 0 0;
+#X coords 1332 0 1331 1 100 100 0;

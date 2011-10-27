@@ -1,0 +1,33 @@
+#N canvas 888 353 524 353 10;
+#X obj 100 100 cnv 15 65 18 empty empty empty 20 12 0 14 -33289 -262144
+0;
+#X obj 100 120 cnv 15 65 18 empty empty empty 20 12 0 14 -33289 -262144
+0;
+#X obj 114 102 nbx 4 14 -1e+37 1e+37 0 0 empty \$0-ead-gop-a a -10
+7 0 8 -1 -262144 -262144 10 256;
+#X obj 114 188 s \$0-attack;
+#X obj 114 122 nbx 4 14 -1e+37 1e+37 0 0 empty \$0-ead-gop-d d -10
+7 0 8 -1 -262144 -262144 300 256;
+#X obj 131 158 s \$0-decay;
+#X obj 272 209 ead~ 10 300;
+#X obj 335 165 r \$0-decay;
+#X obj 303 141 r \$0-attack;
+#X obj 272 97 inlet trigger-bang;
+#X obj 273 254 outlet~;
+#X text 368 16 ead~ GOP wrap;
+#X msg 141 36 set 10;
+#X msg 114 57 set 300;
+#X obj 114 -6 loadbang;
+#X obj 114 15 t b b;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 6 0 10 0;
+#X connect 7 0 6 2;
+#X connect 8 0 6 1;
+#X connect 9 0 6 0;
+#X connect 12 0 2 0;
+#X connect 13 0 4 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 15 1 12 0;
+#X coords 0 -1 1 1 65 38 2 100 100;

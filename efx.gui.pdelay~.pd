@@ -1,0 +1,157 @@
+#N canvas 608 274 738 561 10;
+#X obj -127 99 inlet~;
+#N canvas 825 162 610 447 dsp 0;
+#X obj 46 30 inlet~;
+#X obj 410 22 inlet;
+#X obj 410 60 switch~;
+#X obj 456 9 loadbang;
+#X msg 456 31 1;
+#X obj 578 384 mtof;
+#X obj 578 405 u_bandpass2q 1000 2;
+#X obj 531 430 e_beequad;
+#X obj 578 361 r \$0-bp.freq;
+#X obj 689 383 r \$0-bp.q;
+#X obj 47 84 +pitchdelay~;
+#X obj 48 211 outlet~;
+#X obj 71 58 r \$0-pitchdel;
+#X connect 0 0 10 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 1;
+#X connect 8 0 5 0;
+#X connect 9 0 6 1;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;
+#X restore -106 172 pd dsp;
+#X obj -5 177 r \$0-mix;
+#X obj 100 202 cnv 15 156 15 \$0-record empty empty 20 12 0 14 -1 -228856
+0;
+#X obj 107 233 s \$0-mix;
+#X obj -128 282 outlet~;
+#X msg 100 258 time \$1;
+#X msg 100 323 loopDepth \$1;
+#X msg 100 300 pitchFactor \$1;
+#X msg 100 347 feedback \$1;
+#X obj 100 280 int;
+#X obj 101 425 s \$0-pitchdel;
+#X msg 101 401 octave \$1;
+#X obj 101 203 hradio 13 1 0 7 empty octave-set oct 122 6 0 8 -191407
+-1 -228856 3;
+#X obj 101 377 - 3;
+#N canvas 160 136 514 538 control 0;
+#X text 15 45 time - the delay time. Since the pitch-shifting effect
+is based on modulating the delay time \, it has a higher fidelity when
+the delay time is higher.;
+#X text 13 259 loop depth - this controls the amount of delay line
+which is used for pitch-shifting.;
+#X text 9 301 Dry/Delay volume-controls the volume of the original
+signal (dry) or the delayed signal (delay);
+#X text 13 139 feedback - the same feedback with saturation from +delay~.
+This allows interesting effects like a circle of fifths delay.;
+#X text 16 104 pitch shift - this knob selects ratios and equal tempered
+;
+#X text 14 198 octave - the control adds or subtracts a number of octaves
+to or from the pitch shift value. It varies from -3 to 3 \, and at
+extremes will give very distorted pitch-shifting.;
+#X text 19 14 +pitchdelay~;
+#X text 6 357 Mix-controls the ratio of dry-delay in the output. Ranges
+from 0 to 100% (0% all dry \, 100% all delay). Adjust mix \, then adjust
+volumes as desired.;
+#X text 7 412 Pitch Factor- This controls by how much the pitch is
+shifted. The controls have equal tempered intervals (minor second major
+second etc) with just intonation ratios in between.;
+#X restore -120 -7 pd control details;
+#N canvas 363 118 450 447 init 0;
+#X msg 77 302 12.9;
+#X msg 137 209 0;
+#X msg 193 173 25;
+#X obj 77 325 s pit_time;
+#X obj 137 287 s pit_pitfact;
+#X obj 137 256 s pit_fb;
+#X obj 137 234 s pit_oct;
+#X msg 253 118 85;
+#X obj 193 199 s pit_lpdepth;
+#X obj 253 143 s pit_dryvol;
+#X obj 253 167 s pit_delvol;
+#X msg 38 359 \; pd dsp 1 \;;
+#X obj 38 -18 loadbang;
+#X obj 38 5 t b b b b b b;
+#X obj 306 105 s octave-set;
+#X msg 306 82 3;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 1 0 5 0;
+#X connect 1 0 6 0;
+#X connect 2 0 8 0;
+#X connect 7 0 9 0;
+#X connect 7 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 13 1 0 0;
+#X connect 13 2 1 0;
+#X connect 13 3 2 0;
+#X connect 13 4 7 0;
+#X connect 13 5 15 0;
+#X connect 15 0 14 0;
+#X restore -120 13 pd init;
+#X obj 100 185 gui.slider mix 127 0;
+#X obj 100 117 gui.slider time 5000 0;
+#X obj 100 134 gui.slider fact 34 0;
+#X obj 100 151 gui.slider depth 100 10;
+#X obj 100 168 gui.slider fdb 200 0;
+#X obj 23 -24 r \$1/pdel.time;
+#X obj 23 -4 r \$1/pdel.fact;
+#X obj 23 16 r \$1/pdel.depth;
+#X obj 23 35 r \$1/pdel.fdb;
+#X obj 24 55 r \$1/pdel.mix;
+#X obj 342 58 inlet octave;
+#X obj 24 75 r \$1/pdel.oct;
+#X obj 100 100 cnv 15 156 15 empty empty Pdelay 5 8 0 8 -1 -162280
+0;
+#X obj -128 210 mix.wet~;
+#X obj 304 234 sssad \$1/pdel.time;
+#X obj 305 254 sssad \$1/pdel.fact;
+#X obj 305 273 sssad \$1/pdel.depth;
+#X obj 305 293 sssad \$1/pdel.fdb;
+#X obj 306 313 sssad \$1/pdel.oct;
+#X obj 306 333 sssad \$1/pdel.mix;
+#X connect 0 0 1 0;
+#X connect 0 0 30 0;
+#X connect 1 0 30 1;
+#X connect 2 0 30 2;
+#X connect 6 0 11 0;
+#X connect 7 0 11 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 0;
+#X connect 10 0 8 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 13 0 35 1;
+#X connect 14 0 12 0;
+#X connect 17 0 4 0;
+#X connect 17 1 36 1;
+#X connect 18 0 6 0;
+#X connect 18 1 31 1;
+#X connect 19 0 10 0;
+#X connect 19 1 32 1;
+#X connect 20 0 7 0;
+#X connect 20 1 33 1;
+#X connect 21 0 9 0;
+#X connect 21 1 34 1;
+#X connect 22 0 18 0;
+#X connect 23 0 19 0;
+#X connect 24 0 20 0;
+#X connect 25 0 21 0;
+#X connect 26 0 17 0;
+#X connect 27 0 13 0;
+#X connect 28 0 13 0;
+#X connect 30 0 5 0;
+#X connect 31 0 18 0;
+#X connect 32 0 19 0;
+#X connect 33 0 20 0;
+#X connect 34 0 21 0;
+#X connect 35 0 13 0;
+#X connect 36 0 17 0;
+#X coords 0 -1 1 1 157 117 2 100 100;

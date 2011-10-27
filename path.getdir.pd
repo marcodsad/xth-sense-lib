@@ -1,0 +1,8 @@
+#N canvas 497 245 291 165 10;
+#X obj 73 60 getdir;
+#X obj 73 35 loadbang;
+#X obj 73 83 outlet;
+#X obj 20 35 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;

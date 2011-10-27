@@ -1,0 +1,29 @@
+#N canvas 98 247 428 235 10;
+#X obj 100 100 cnv 14 155 15 empty empty empty 20 12 0 14 -1 -1 0;
+#X obj 116 101 hradio 13 1 0 7 empty empty empty 108 7 0 8 -191407
+-1 -228856 0;
+#X obj 100 100 tgl 15 0 empty empty empty 17 7 0 10 -1 -228856 -1 0
+1;
+#X msg 116 46 label \$1;
+#X obj 116 -21 loadbang;
+#X obj 116 1 symbol \$1;
+#X symbolatom 116 24 10 0 0 0 - - -;
+#X obj 217 31 inlet radio;
+#X obj 33 49 inlet tgl;
+#X obj 100 146 outlet tgl;
+#X obj 175 146 outlet radio;
+#X obj 314 8 inlet label;
+#X msg 314 64 label \$1;
+#X obj 314 34 symbol;
+#X connect 1 0 10 0;
+#X connect 2 0 9 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 11 0 13 0;
+#X connect 12 0 1 0;
+#X connect 13 0 12 0;
+#X coords 0 -1 1 1 155 15 2 100 100;

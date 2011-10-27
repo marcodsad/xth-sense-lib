@@ -1,0 +1,35 @@
+#N canvas 631 211 615 534 10;
+#X declare -lib pdmtl;
+#X declare -lib sssad-lib;
+#X declare -lib soundhack;
+#X declare -lib xthsense;
+#X obj 204 334 import pdmtl;
+#X obj 284 334 import sssad-lib;
+#X text 201 248 I/O;
+#X obj -1 470 dac~;
+#X obj -2 333 mix.ch.stereo~;
+#X obj -2 195 efx.gui.pdelay~;
+#X obj -4 73 osc~ 400;
+#X obj 67 95 gui.ead~;
+#X obj 67 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -3 157 *~;
+#X text 201 266 Mono > Mono;
+#X text 192 117 Soundhack modules ported to Pd by:;
+#X text 191 131 Tom Erbe \, William Brent \, Daniel Arias \,;
+#X text 192 145 Bryan Oczkowsky \, Trevor LeVieux.;
+#X text 192 170 http://www.soundhack.com/externs.php;
+#X text 191 103 GOP and sssad wrap for [+pitchdelay~] \, included in
+;
+#X text 200 302 Needs pdmtl \, sssad-lib \, soundhack;
+#X obj 388 334 import soundhack;
+#X obj 482 498 import xthsense;
+#X connect 4 0 3 0;
+#X connect 4 1 3 1;
+#X connect 5 0 4 0;
+#X connect 5 0 4 1;
+#X connect 6 0 9 0;
+#X connect 7 0 9 1;
+#X connect 8 0 7 0;
+#X connect 9 0 5 0;
+#X coords 0 0 1 1 157 117 0;

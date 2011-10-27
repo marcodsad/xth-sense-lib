@@ -1,0 +1,31 @@
+#N canvas 6 47 339 384 10;
+#X obj -13 170 timer;
+#X msg -13 120 bang;
+#X msg 14 146 bang;
+#X floatatom -50 199 5 0 0 0 - - -;
+#X obj -13 222 <= 200;
+#X obj -13 244 sel 1;
+#X obj -13 31 t b;
+#X obj -13 73 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj -60 31 init 0;
+#X obj -60 9 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -13 93 sel 1 0;
+#X obj -13 6 inlet bang;
+#X obj 62 77 inlet click-time;
+#X obj -13 273 outlet bang-double-click;
+#X connect 0 0 3 0;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 4 0 5 0;
+#X connect 5 0 13 0;
+#X connect 6 0 7 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 1 0;
+#X connect 10 1 2 0;
+#X connect 11 0 6 0;
+#X connect 12 0 4 1;
