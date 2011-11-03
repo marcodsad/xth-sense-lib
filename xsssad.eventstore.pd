@@ -1,4 +1,4 @@
-#N canvas 532 301 1049 541 10;
+#N canvas 545 142 1049 541 10;
 #X text 180 1017 Hint: get creative with the [OSCroute] external!;
 #X obj 118 202 r \$0-load;
 #X text 518 131 This abstraction and all the other sssad state saving
@@ -88,19 +88,19 @@ my own.;
 #X msg 210 860 add SSSAD-EVE_ADMIN set;
 #X obj 577 766 list prepend add SSSAD-EVE;
 #X obj 577 679 r SSSAD-EVE_ADMIN;
-#X obj 100 100 cnv 15 200 15 empty empty Seq 6 7 0 8 -228856 -33289
+#X obj 100 100 cnv 15 180 15 empty empty Seq 2 8 0 8 -191407 -33289
 0;
-#X obj 140 100 nbx 5 15 0 1e+37 0 0 empty empty empty 0 -6 0 8 -1 -191407
+#X obj 142 100 nbx 4 15 0 1e+37 0 0 empty empty empty 0 -6 0 8 -1 -191407
 -1 0 256;
-#X obj 119 20 inlet;
-#X obj 119 48 t b f;
-#X obj 182 100 hradio 15 1 0 3 empty empty Load 12 8 0 8 -1 -1 -191407
+#X obj 103 34 inlet;
+#X obj 103 62 t b f;
+#X obj 177 100 hradio 15 1 0 2 empty empty Load 3 8 0 8 -1 -1 -191407
 0;
-#X obj 228 100 bng 15 250 50 0 \$0-load empty empty 17 7 0 8 -128992
+#X obj 208 100 bng 15 250 50 0 \$0-load empty empty 17 7 0 8 -128992
 -1 -1;
-#X obj 243 100 hradio 15 1 0 3 empty empty Save 8 8 0 8 -1 -1 -191407
+#X obj 223 100 hradio 15 1 0 3 empty empty Save 8 8 0 8 -1 -1 -191407
 0;
-#X obj 285 100 bng 15 250 50 0 \$0-save empty empty 17 7 0 8 -128992
+#X obj 265 100 bng 15 250 50 0 \$0-save empty empty 17 7 0 8 -128992
 -66577 -1;
 #X connect 1 0 11 0;
 #X connect 4 0 34 0;
@@ -142,4 +142,4 @@ my own.;
 #X connect 38 0 39 0;
 #X connect 39 0 41 0;
 #X connect 39 1 37 0;
-#X coords 0 -1 1 1 200 15 2 100 100;
+#X coords 0 -1 1 1 180 15 2 100 100;

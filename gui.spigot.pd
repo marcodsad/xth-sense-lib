@@ -1,4 +1,4 @@
-#N canvas 699 340 450 300 10;
+#N canvas 705 363 450 300 10;
 #X obj 42 173 spigot;
 #X floatatom 82 147 1 0 1 0 - - -;
 #X obj 42 34 inlet;
@@ -10,7 +10,7 @@
 #X text 275 107 outlet 1: data stream;
 #X text 276 123 outlet 2: value 1/0;
 #X obj 134 179 outlet;
-#X obj 223 168 sssad \$1/go.onoff;
+#X obj 223 168 xsssad \$1/go.onoff;
 #X connect 0 0 3 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 0;

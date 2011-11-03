@@ -1,4 +1,4 @@
-#N canvas 226 63 441 779 10;
+#N canvas 575 63 529 779 10;
 #X obj 20 503 *~;
 #X obj 196 83 cnv 15 45 119 empty empty empty 20 12 0 14 -133153 -262144
 0;
@@ -8,16 +8,16 @@
 -24967 -1 0 1;
 #X obj 220 91 vsl 15 100 0 1 0 0 szgzfsg dfgdg empty 0 -9 0 10 -158119
 -162280 -1 0 1;
-#X obj 211 198 cnv 6 6 1 empty \$0-right empty 20 12 0 14 -24198 -24198
+#X obj 211 199 cnv 6 6 1 empty \$0-right empty 20 12 0 14 -24198 -24198
 0;
-#X obj 201 198 cnv 6 6 1 empty \$0-left empty 20 12 0 14 -24198 -24198
+#X obj 201 199 cnv 6 6 1 empty \$0-left empty 20 12 0 14 -24198 -24198
 0;
 #X obj 21 419 inlet~ l;
 #X obj 111 418 inlet~ r;
 #X obj 112 505 *~;
 #X obj 20 655 outlet~ l;
 #X obj 112 656 outlet~ r;
-#X obj 220 194 vsl 15 3 0 1 0 0 szgzfsg \$0-vol empty 0 -9 0 10 -217089
+#X obj 220 194 vsl 15 3 0 1 0 0 szgzfsg \$0-vol empty 0 -9 0 10 -196621
 -217090 -1 0 1;
 #N canvas 792 310 375 479 size 0;
 #X obj 88 35 inlet;
@@ -53,8 +53,8 @@
 #X obj 308 67 s \$0-dsp;
 #X obj 220 425 r \$0-dsp;
 #X obj 281 40 t f f;
-#X obj 318 104 r \$0-dsp;
-#X obj 308 176 s \$0-dsp;
+#X obj 318 94 r \$0-dsp;
+#X obj 308 196 s \$0-dsp;
 #X obj 220 450 t f f;
 #X obj 247 281 s \$0-dsp;
 #X obj 220 222 t f f;
@@ -63,7 +63,7 @@
 #X msg 292 232 1;
 #X obj 81 -17 r \$1/vol;
 #X obj 81 7 scale.lin 1 0 127;
-#X obj 281 153 t f f;
+#X obj 281 173 t f f;
 #N canvas 385 100 627 491 animation 0;
 #X obj 282 42 inlet;
 #X obj 56 41 inlet~;
@@ -208,7 +208,10 @@
 #X connect 17 1 12 0;
 #X connect 17 2 10 0;
 #X restore 178 558 pd animation;
-#X obj 281 128 xsssad \$1/vol;
+#X obj 281 148 xsssad \$1/vol;
+#X obj 388 149 mix.switchoglitch~;
+#X obj 318 119 t f f;
+#X obj 388 171 switch~;
 #X connect 0 0 10 0;
 #X connect 0 0 36 0;
 #X connect 4 0 29 0;
@@ -226,7 +229,7 @@
 #X connect 23 0 27 0;
 #X connect 24 0 4 0;
 #X connect 24 1 22 0;
-#X connect 25 0 37 1;
+#X connect 25 0 39 0;
 #X connect 27 0 21 0;
 #X connect 27 1 36 2;
 #X connect 29 0 13 0;
@@ -240,4 +243,7 @@
 #X connect 35 0 4 0;
 #X connect 35 1 26 0;
 #X connect 37 0 35 0;
+#X connect 38 0 40 0;
+#X connect 39 0 37 1;
+#X connect 39 1 38 0;
 #X coords 0 -1 1 1 45 126 2 196 83;

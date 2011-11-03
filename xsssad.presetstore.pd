@@ -1,9 +1,5 @@
-#N canvas 573 47 912 795 10;
+#N canvas 596 226 912 795 10;
 #X text 80 1017 Hint: get creative with the [OSCroute] external!;
-#X obj 104 112 bng 14 250 50 0 \$0-save empty save 17 7 0 8 -128992
--66577 -1;
-#X obj 56 112 bng 14 250 50 0 \$0-load empty load 17 7 0 8 -128992
--1 -1;
 #X obj 18 202 r \$0-load;
 #X text 418 131 This abstraction and all the other sssad state saving
 stuff is due to the genius of Frank Barknecht. Any mistakes are purely
@@ -20,8 +16,6 @@ my own.;
 #X msg 110 860 add SSSAD_ADMIN set;
 #X obj 119 524 r \$0-save;
 #X obj 267 588 s SSSAD_SAVE;
-#X obj 4 112 nbx 5 14 0 1e+37 0 0 empty empty preset 0 -6 0 8 -162280
--1 -1 5 256;
 #X msg 450 291 set \, addsemi;
 #X obj 18 235 t b b b;
 #X obj 58 261 float;
@@ -94,48 +88,60 @@ my own.;
 -1 -1 0;
 #X obj 314 228 + 4;
 #X floatatom 427 440 5 0 0 0 - - -;
-#X obj 7 6 inlet;
-#X obj 7 59 t b f;
-#X obj 7 33 change;
-#X connect 3 0 19 0;
-#X connect 6 0 8 0;
-#X connect 7 0 12 0;
-#X connect 8 0 7 0;
-#X connect 9 0 27 0;
-#X connect 10 0 21 0;
-#X connect 12 0 9 0;
-#X connect 13 0 27 0;
-#X connect 14 0 27 0;
-#X connect 15 0 10 0;
-#X connect 17 0 24 0;
-#X connect 18 0 33 0;
-#X connect 19 0 33 0;
-#X connect 19 1 20 0;
-#X connect 19 2 18 0;
-#X connect 20 0 22 0;
-#X connect 21 0 14 0;
-#X connect 21 1 11 0;
-#X connect 21 2 13 0;
-#X connect 21 3 30 0;
-#X connect 21 4 28 0;
-#X connect 21 5 25 0;
-#X connect 21 6 16 0;
-#X connect 22 0 34 0;
-#X connect 24 0 20 1;
-#X connect 24 0 27 1;
-#X connect 24 0 26 1;
-#X connect 24 0 28 1;
-#X connect 24 0 38 0;
+#X obj 14 5 inlet;
+#X obj 14 58 t b f;
+#X obj 14 32 change;
+#X obj 0 100 cnv 15 180 15 empty empty Scene 2 8 0 8 -191407 -33289
+0;
+#X obj 41 100 nbx 4 15 0 1e+37 0 0 empty empty empty 0 -6 0 8 -1 -191407
+-1 0 256;
+#X obj 76 100 hradio 15 1 0 2 empty empty Load 3 8 0 8 -1 -1 -191407
+0;
+#X obj 107 100 bng 15 250 50 0 \$0-load empty empty 17 7 0 8 -128992
+-1 -1;
+#X obj 123 100 hradio 15 1 0 3 empty empty Save 8 8 0 8 -1 -1 -191407
+0;
+#X obj 165 100 bng 15 250 50 0 \$0-save empty empty 17 7 0 8 -128992
+-66577 -1;
+#X connect 1 0 16 0;
+#X connect 4 0 6 0;
+#X connect 5 0 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 24 0;
+#X connect 8 0 18 0;
+#X connect 10 0 7 0;
+#X connect 11 0 24 0;
+#X connect 12 0 24 0;
+#X connect 13 0 8 0;
+#X connect 15 0 30 0;
+#X connect 16 0 30 0;
+#X connect 16 1 17 0;
+#X connect 16 2 15 0;
+#X connect 17 0 19 0;
+#X connect 18 0 12 0;
+#X connect 18 1 9 0;
+#X connect 18 2 11 0;
+#X connect 18 3 27 0;
+#X connect 18 4 25 0;
+#X connect 18 5 22 0;
+#X connect 18 6 14 0;
+#X connect 19 0 31 0;
+#X connect 21 0 17 1;
+#X connect 21 0 24 1;
+#X connect 21 0 23 1;
+#X connect 21 0 25 1;
+#X connect 21 0 35 0;
+#X connect 22 0 23 0;
 #X connect 25 0 26 0;
-#X connect 28 0 29 0;
-#X connect 29 0 31 0;
-#X connect 30 0 26 0;
-#X connect 31 0 26 0;
-#X connect 32 0 28 0;
-#X connect 34 0 33 0;
-#X connect 36 0 37 0;
-#X connect 39 0 41 0;
-#X connect 40 0 2 0;
-#X connect 40 1 17 0;
-#X connect 41 0 40 0;
-#X coords 0 -1 1 1 150 30 2 0 100;
+#X connect 26 0 28 0;
+#X connect 27 0 23 0;
+#X connect 28 0 23 0;
+#X connect 29 0 25 0;
+#X connect 31 0 30 0;
+#X connect 33 0 34 0;
+#X connect 36 0 38 0;
+#X connect 37 0 42 0;
+#X connect 37 1 40 0;
+#X connect 38 0 37 0;
+#X connect 40 0 21 0;
+#X coords 0 -1 1 1 180 15 2 0 100;

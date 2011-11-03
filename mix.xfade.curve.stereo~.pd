@@ -1,4 +1,4 @@
-#N canvas 402 71 943 680 10;
+#N canvas 408 94 943 680 10;
 #X obj 59 577 +~;
 #X obj 508 245 -;
 #X msg 508 221 1 \$1;
@@ -18,7 +18,7 @@
 #X connect 2 0 5 0;
 #X connect 3 0 0 0;
 #X connect 4 0 0 1;
-#X restore 512 269 pd pow;
+#X restore 508 268 pd pow;
 #N canvas 0 0 454 304 pow 0;
 #X obj 125 174 pow 2;
 #X msg 127 216 1 \$1;
@@ -33,7 +33,7 @@
 #X connect 4 0 0 1;
 #X restore 481 348 pd pow;
 #X obj 481 372 t f f;
-#X obj 492 289 t f f;
+#X obj 508 294 t f f;
 #X obj 481 89 f \$2;
 #X obj 645 66 loadbang;
 #X obj 645 95 f \$1;
@@ -43,7 +43,7 @@
 #X obj 744 152 sel 0;
 #X obj 700 128 moses 0;
 #X msg 700 179 1;
-#X obj 720 223 f;
+#X obj 733 214 f;
 #X obj 132 473 line~;
 #X msg 132 448 \$1 5;
 #X obj 19 523 *~;

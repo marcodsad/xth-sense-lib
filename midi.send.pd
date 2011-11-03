@@ -1,4 +1,4 @@
-#N canvas 672 225 487 463 10;
+#N canvas 690 294 487 463 10;
 #X obj 100 100 cnv 15 125 20 empty empty empty 20 12 0 14 -133153 -66577
 0;
 #X obj 203 103 tgl 15 0 empty empty empty 17 12 0 10 -262144 -1 -1
@@ -74,7 +74,7 @@
 #X obj 49 164 inlet value;
 #X obj 92 30 t b;
 #X obj 242 207 s \$0-label.reset;
-#X obj 168 103 hsl 30 15 0 127 0 0 gdsfaf \$0-label -127 0 8 0 8 -128992
+#X obj 168 103 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0 0 8 0 8 -128992
 -128992 -262144 0 1;
 #X obj 177 226 spigot 0;
 #X obj 278 296 pipe s 700;
@@ -89,22 +89,22 @@
 #X obj 203 152 t f f f;
 #X obj 330 250 r \$0-midi.ch;
 #X obj 242 183 sel 0;
-#N canvas 261 440 375 402 output.make.label.value 0;
+#N canvas 273 440 375 402 output.make.label.value 0;
 #X obj 50 21 inlet;
 #X obj 50 175 makefilename %f;
-#X msg 50 242 label \$1;
-#X obj 50 200 stripfilename -7;
-#X obj 50 266 s \$0-label;
+#X msg 50 252 label \$1;
+#X obj 50 276 s \$0-label;
 #X obj 77 128 outlet value;
 #X obj 50 77 t f f;
 #X obj 50 55 scale.lin 127 0 1;
-#X connect 0 0 7 0;
-#X connect 1 0 3 0;
-#X connect 2 0 4 0;
-#X connect 3 0 2 0;
-#X connect 6 0 1 0;
-#X connect 6 1 5 0;
-#X connect 7 0 6 0;
+#X obj 50 200 stripfilename -7;
+#X connect 0 0 6 0;
+#X connect 1 0 7 0;
+#X connect 2 0 3 0;
+#X connect 5 0 1 0;
+#X connect 5 1 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 2 0;
 #X restore 49 185 pd output.make.label.value;
 #X obj 203 10 xsssad \$1/paramoff;
 #X obj 278 272 xsssad \$1/paramout;

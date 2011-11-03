@@ -1,12 +1,12 @@
-#N canvas 244 356 450 486 10;
+#N canvas 513 186 450 486 10;
 #X obj 102 100 nbx 3 15 0 100 0 0 empty empty empty 0 -8 0 8 -1 -262144
 -1 0 256;
-#X obj 145 269 inlet~;
-#X obj 247 271 inlet~;
-#X obj 143 328 s~ \$1_l;
-#X obj 248 325 s~ \$1_r;
-#X obj 144 297 *~;
-#X obj 248 298 *~;
+#X obj 140 299 inlet~;
+#X obj 242 301 inlet~;
+#X obj 138 358 s~ \$1_l;
+#X obj 243 355 s~ \$1_r;
+#X obj 139 327 *~;
+#X obj 243 328 *~;
 #X obj 103 100 hsl 30 15 0 127 0 0 gdsfaf \$0-amount 0 0 8 0 8 -128992
 -128992 -262144 0 1;
 #N canvas 619 248 339 236 label 0;
@@ -23,14 +23,16 @@
 #X connect 3 0 5 0;
 #X connect 4 0 6 0;
 #X connect 6 0 2 0;
-#X restore 121 148 pd label;
-#X obj 160 232 utils.zipper~;
-#X obj 262 232 utils.zipper~;
-#X obj 141 180 scale.lin 1 0 100;
-#X obj 141 201 t f f f;
-#X obj 102 122 t f f f;
+#X restore 119 178 pd label;
+#X obj 155 262 utils.zipper~;
+#X obj 257 262 utils.zipper~;
+#X obj 136 210 scale.lin 1 0 100;
+#X obj 136 231 t f f f;
 #X obj -21 122 xsssad \$1/wet;
-#X connect 0 0 13 0;
+#X obj 182 156 mix.switchoglitch~;
+#X obj 102 122 t f f f f;
+#X obj 182 179 switch~;
+#X connect 0 0 15 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 5 0 3 0;
@@ -40,8 +42,10 @@
 #X connect 11 0 12 0;
 #X connect 12 1 9 0;
 #X connect 12 2 10 0;
-#X connect 13 0 14 1;
-#X connect 13 1 8 0;
-#X connect 13 2 11 0;
-#X connect 14 0 13 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 13 1;
+#X connect 15 1 8 0;
+#X connect 15 2 11 0;
+#X connect 15 3 14 0;
 #X coords 0 -1 1 1 35 15 2 100 100;
