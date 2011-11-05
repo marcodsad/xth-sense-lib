@@ -1,4 +1,4 @@
-#N canvas 34 183 811 559 10;
+#N canvas 1713 75 811 559 10;
 #X msg -63 140 time \$1;
 #X msg -63 164 timeVariation \$1;
 #X obj -63 371 s \$0-bub;
@@ -12,7 +12,7 @@
 0;
 #X msg 100 334 octave \$1;
 #X obj 100 272 hradio 13 1 0 9 empty bub_initoct oct 122 6 0 8 -191407
--1 -228856 4;
+-1 -228856 7;
 #X obj 100 312 - 4;
 #X obj 0 -86 r \$1/bub.time;
 #X obj 0 -66 r \$1/bub.tvar;
@@ -130,7 +130,7 @@ for each grain. The octave value is added to the pitch shift.;
 12 tone equal temperament \, or to just intonation.;
 #X restore 515 -53 pd bubbler details;
 #X obj 332 -70 inlet~;
-#N canvas 984 203 610 447 dsp 0;
+#N canvas 1827 148 610 447 dsp 0;
 #X obj 46 30 inlet~;
 #X obj 410 22 inlet;
 #X obj 410 60 switch~;
