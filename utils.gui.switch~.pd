@@ -1,8 +1,8 @@
-#N canvas 744 542 450 300 10;
-#X obj 103 150 outlet;
-#X obj 103 102 tgl 15 0 empty empty empty 17 12 0 10 -262144 -1 -1
-0 1;
-#N canvas 505 133 240 238 animation 0;
+#N canvas 832 542 450 300 10;
+#X obj 103 100 hsl 73 20 0 127 0 0 dfsdfsfsdfs fadsfsdafasfs Audio.OFF
+2 10 1 8 -128992 -128992 -1 3300 1;
+#X obj 205 196 outlet;
+#N canvas 511 156 240 238 animation 0;
 #X obj 19 26 inlet on.off;
 #X msg 19 157 open \$1;
 #X obj 19 48 sel 1 0;
@@ -64,15 +64,34 @@
 #X connect 5 0 1 0;
 #X connect 6 0 1 0;
 #X connect 7 0 6 0;
-#X restore 157 100 pd animation;
-#X obj 52 68 init 0;
-#X obj 101 101 iem_image /home/sad/00.Pd/projects/_Xth-Sense/dev/images/circ.button.off.gif
+#X restore 282 114 pd animation;
+#X obj 153 139 init 0;
+#X obj 159 101 iem_image /home/sad/00.Pd/projects/_Xth-Sense/dev/images/circ.button.off.gif
 0 0 empty empty;
-#X obj 103 50 xsssad \$1/switch~;
-#X connect 1 0 0 0;
+#X obj 276 167 xsssad \$1/switch~;
+#N canvas 6 47 450 300 label 0;
+#X obj 29 36 inlet on.off;
+#X obj 29 58 sel 1 0;
+#X msg 29 91 label Audio.ON;
+#X msg 48 118 label Audio.OFF;
+#X obj 29 152 outlet;
+#X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 1 0 5 1;
+#X connect 1 1 3 0;
 #X connect 2 0 4 0;
-#X connect 3 0 1 0;
-#X connect 5 0 1 0;
-#X coords 0 -1 1 1 19 19 2 100 100;
+#X connect 3 0 4 0;
+#X restore 100 197 pd label;
+#X obj 205 146 t b;
+#X obj 205 169 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 7 0;
+#X connect 2 0 4 0;
+#X connect 3 0 8 0;
+#X connect 5 0 8 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 1;
+#X connect 8 0 2 0;
+#X connect 8 0 1 0;
+#X connect 8 0 6 0;
+#X coords 0 -1 1 1 78 20 2 100 100;

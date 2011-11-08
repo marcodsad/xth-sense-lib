@@ -1,4 +1,4 @@
-#N canvas 92 238 565 335 10;
+#N canvas 98 261 565 335 10;
 #X obj -65 72 inlet~;
 #X obj -64 179 outlet~;
 #X text 99 269 Marco Donnarumma :: devel@thesaddj.com :: Edinburgh
@@ -71,7 +71,7 @@
 #X connect 13 0 5 0;
 #X connect 13 0 20 1;
 #X connect 14 0 6 0;
-#X connect 14 0 21 1;
+#X connect 14 1 21 1;
 #X connect 15 0 12 0;
 #X connect 16 0 13 0;
 #X connect 17 0 14 0;

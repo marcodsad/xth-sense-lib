@@ -1,4 +1,4 @@
-#N canvas 1713 75 811 559 10;
+#N canvas 716 125 811 559 10;
 #X msg -63 140 time \$1;
 #X msg -63 164 timeVariation \$1;
 #X obj -63 371 s \$0-bub;
@@ -12,7 +12,7 @@
 0;
 #X msg 100 334 octave \$1;
 #X obj 100 272 hradio 13 1 0 9 empty bub_initoct oct 122 6 0 8 -191407
--1 -228856 7;
+-1 -228856 2;
 #X obj 100 312 - 4;
 #X obj 0 -86 r \$1/bub.time;
 #X obj 0 -66 r \$1/bub.tvar;
