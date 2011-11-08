@@ -1,4 +1,4 @@
-#N canvas 598 127 339 384 10;
+#N canvas 622 219 339 384 10;
 #X obj -13 170 timer;
 #X msg -13 120 bang;
 #X msg 14 146 bang;
@@ -14,15 +14,13 @@
 #X obj -13 93 sel 1 0;
 #X obj -13 6 inlet bang;
 #X obj 62 77 inlet click-time;
-#X obj -13 323 outlet bang-double-click;
-#X obj -13 293 spigot;
-#X obj 34 245 initz.delay 1 200;
+#X obj -13 286 outlet bang-double-click;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 1;
 #X connect 4 0 5 0;
-#X connect 5 0 14 0;
+#X connect 5 0 13 0;
 #X connect 6 0 7 0;
 #X connect 7 0 10 0;
 #X connect 8 0 7 0;
@@ -31,5 +29,3 @@
 #X connect 10 1 2 0;
 #X connect 11 0 6 0;
 #X connect 12 0 4 1;
-#X connect 14 0 13 0;
-#X connect 15 0 14 1;
