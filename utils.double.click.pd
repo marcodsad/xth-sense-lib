@@ -1,4 +1,4 @@
-#N canvas 622 219 339 384 10;
+#N canvas 628 242 339 384 10;
 #X obj -13 170 timer;
 #X msg -13 120 bang;
 #X msg 14 146 bang;
@@ -23,7 +23,6 @@
 #X connect 5 0 13 0;
 #X connect 6 0 7 0;
 #X connect 7 0 10 0;
-#X connect 8 0 7 0;
 #X connect 9 0 8 0;
 #X connect 10 0 1 0;
 #X connect 10 1 2 0;
