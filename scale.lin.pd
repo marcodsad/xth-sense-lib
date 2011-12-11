@@ -1,4 +1,4 @@
-#N canvas 30 355 777 442 10;
+#N canvas 42 400 777 442 10;
 #X obj 130 188 + \$2;
 #X obj 130 226 outlet;
 #X obj 303 185 f \$1;
@@ -16,7 +16,7 @@
 #X text 125 362 m = top input value;
 #X text 125 380 c = bottom value;
 #X obj 303 20 inlet top.value;
-#X obj 505 185 inlet top.input.value;
+#X obj 511 172 inlet top.input.value;
 #X obj 303 46 s \$0-top.value;
 #X obj 408 46 s \$0-bottom.value;
 #X obj 408 112 r \$0-bottom.value;
@@ -33,6 +33,7 @@
 #X text 600 41 1st arg: new top value;
 #X text 600 55 2nd arg: new bottom value;
 #X text 600 70 3rd: incoming top value;
+#X obj 511 196 t b f;
 #X connect 0 0 1 0;
 #X connect 2 0 4 0;
 #X connect 3 0 9 0;
@@ -44,7 +45,7 @@
 #X connect 11 0 2 0;
 #X connect 11 1 5 0;
 #X connect 16 0 18 0;
-#X connect 17 0 5 1;
+#X connect 17 0 34 0;
 #X connect 20 0 26 0;
 #X connect 21 0 25 0;
 #X connect 22 0 0 1;
@@ -54,3 +55,5 @@
 #X connect 25 1 2 1;
 #X connect 26 0 2 0;
 #X connect 26 1 4 1;
+#X connect 34 0 5 0;
+#X connect 34 1 5 1;

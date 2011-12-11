@@ -1,4 +1,4 @@
-#N canvas 194 72 976 770 10;
+#N canvas 218 72 976 770 10;
 #X obj 448 383 hip~ 5;
 #X floatatom 450 -99 4 0 100 0 - - -;
 #X obj 449 330 *~;
@@ -82,8 +82,8 @@
 0;
 #X obj 108 151 bng 15 250 50 0 \$0-record empty empty 17 7 0 10 -221317
 -1 -1;
-#X obj 296 -182 inlet bang-record;
-#X obj 296 -160 s \$0-bang-record;
+#X obj 621 -205 inlet bang-record;
+#X obj 621 -183 s \$0-bang-record;
 #X obj 260 133 r \$0-bang-record;
 #X obj 700 315 tabread4~ \$0-source;
 #X obj 448 306 tabread4~ \$0-source;

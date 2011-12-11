@@ -1,4 +1,4 @@
-#N canvas 545 142 1049 541 10;
+#N canvas 551 188 1049 541 10;
 #X text 180 1017 Hint: get creative with the [OSCroute] external!;
 #X obj 118 202 r \$0-load;
 #X text 518 131 This abstraction and all the other sssad state saving
@@ -90,7 +90,7 @@ my own.;
 #X obj 577 679 r SSSAD-EVE_ADMIN;
 #X obj 100 100 cnv 15 180 15 empty empty Seq 2 8 0 8 -191407 -33289
 0;
-#X obj 142 100 nbx 4 15 0 1e+37 0 0 empty empty empty 0 -6 0 8 -1 -191407
+#X obj 142 100 nbx 4 15 0 10 0 0 empty empty empty 0 -6 0 8 -1 -191407
 -1 0 256;
 #X obj 103 34 inlet;
 #X obj 103 62 t b f;

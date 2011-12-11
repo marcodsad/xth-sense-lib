@@ -1,9 +1,9 @@
-#N canvas 700 264 766 525 10;
+#N canvas 664 148 766 525 10;
 #X obj 100 100 cnv 15 125 20 empty empty empty 20 12 0 14 -133153 -66577
 0;
 #X obj 102 103 hradio 15 1 0 4 empty empty -- 6 8 0 8 -1 -1 -262144
 0;
-#X obj 365 162 r SSSAD;
+#X obj 365 76 r SSSAD;
 #X obj 332 260 symbol;
 #X obj 203 103 tgl 15 0 empty empty empty 17 12 0 10 -262144 -1 -1
 0 1;
@@ -86,7 +86,7 @@
 #X obj 192 226 spigot 0;
 #X obj 40 65 r \$0-label-fx-param;
 #X obj 203 160 t f f f f;
-#N canvas 237 397 375 402 make.label.value 0;
+#N canvas 243 420 375 402 make.label.value 0;
 #X obj 50 21 inlet;
 #X obj 50 175 makefilename %f;
 #X msg 50 242 label \$1;
@@ -94,14 +94,12 @@
 #X obj 50 266 s \$0-label;
 #X obj 77 128 outlet value;
 #X obj 50 77 t f f;
-#X obj 50 55 scale.lin 127 0 1;
-#X connect 0 0 7 0;
+#X connect 0 0 6 0;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
 #X connect 3 0 2 0;
 #X connect 6 0 1 0;
 #X connect 6 1 5 0;
-#X connect 7 0 6 0;
 #X restore 24 157 pd make.label.value;
 #N canvas 24 116 322 208 make.label.name 0;
 #X obj 49 19 inlet;
@@ -117,7 +115,7 @@
 #X obj 332 320 t s s s;
 #X obj 560 245 pipe s 700;
 #X obj 203 36 pipe 750;
-#N canvas 319 247 907 350 route.and.parse.OSC 0;
+#N canvas 325 270 907 350 route.and.parse.OSC 0;
 #X obj 46 225 OSC.path.merge /wp1;
 #X obj 81 205 OSC.path.merge /wp2;
 #X obj 259 104 OSC.path.merge /wp7;
@@ -179,15 +177,34 @@
 #X connect 20 0 11 0;
 #X restore 365 189 pd route.and.parse.OSC;
 #X obj 504 365 print;
-#X text 400 -30 1_ receives a lists (including the object arguments)
+#X text 341 -54 1_ receives a lists (including the object arguments)
 ;
-#X text 401 -9 2_ parse the list: take out the argument and transform
+#X text 342 -33 2_ parse the list: take out the argument and transform
 the list into a symbol;
-#X text 402 26 3_ store the symbol;
-#X text 402 49 4_ when prompted \, it feed the symbol to [iem_s];
+#X text 343 2 3_ store the symbol;
+#X text 343 25 4_ when prompted \, it feed the symbol to [iem_s];
 #X obj 203 10 xsssad \$1/paramoff;
 #X obj 560 208 xsssad \$1/paramout;
-#X connect 2 0 27 0;
+#X obj 365 163 spigot 1;
+#X obj 410 104 r SCENE.LOAD;
+#N canvas 12 70 261 197 open.close 0;
+#X obj 84 58 t b b;
+#X obj 84 80 del 900;
+#X msg 139 80 0;
+#X obj 84 32 inlet;
+#X obj 84 156 outlet;
+#X msg 84 107 1;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 1 0 5 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 5 0 4 0;
+#X restore 410 130 pd open.close;
+#X obj 439 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 491 104 <<< workaround for scene loading;
+#X connect 2 0 35 0;
 #X connect 3 0 24 0;
 #X connect 4 0 19 0;
 #X connect 4 0 10 0;
@@ -216,4 +233,8 @@ the list into a symbol;
 #X connect 27 1 3 1;
 #X connect 33 0 26 0;
 #X connect 34 0 25 0;
+#X connect 35 0 27 0;
+#X connect 36 0 37 0;
+#X connect 37 0 35 1;
+#X connect 37 0 38 0;
 #X coords 0 -1 1 1 125 20 2 100 100;

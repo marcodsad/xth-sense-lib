@@ -1,4 +1,4 @@
-#N canvas 758 243 738 561 10;
+#N canvas 898 165 738 561 10;
 #X obj -169 79 inlet~;
 #N canvas 567 178 588 338 dsp 0;
 #X obj 46 30 inlet~;
@@ -21,16 +21,16 @@
 0;
 #X obj 107 233 s \$0-mix;
 #X obj -170 262 outlet~;
-#X msg 100 258 time \$1;
-#X msg 100 323 loopDepth \$1;
-#X msg 100 300 pitchFactor \$1;
-#X msg 100 347 feedback \$1;
-#X obj 100 280 int;
-#X obj 101 425 s \$0-pitchdel;
-#X msg 101 401 octave \$1;
+#X msg 101 258 time \$1;
+#X msg 101 322 loopDepth \$1;
+#X msg 101 300 pitchFactor \$1;
+#X msg 101 343 feedback \$1;
+#X obj 101 280 int;
+#X obj 102 412 s \$0-pitchdel;
+#X msg 102 388 octave \$1;
 #X obj 101 203 hradio 13 1 0 7 empty octave-set oct 122 6 0 8 -191407
--1 -228856 3;
-#X obj 101 377 - 3;
+-1 -228856 1;
+#X obj 102 364 - 3;
 #N canvas 166 159 514 538 control 0;
 #X text 15 45 time - the delay time. Since the pitch-shifting effect
 is based on modulating the delay time \, it has a higher fidelity when

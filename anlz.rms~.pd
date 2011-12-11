@@ -1,13 +1,13 @@
-#N canvas 683 322 300 169 10;
+#N canvas 914 375 300 169 10;
 #X obj 100 101 nbx 8 16 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 8
--1 -262144 -1 0 256;
+-1 -262144 -1 0.346772 256;
 #X obj 163 101 cnv 16 30 16 empty empty rms 10 8 0 8 -1 -262144 0;
-#X obj 100 38 env~;
 #X obj 99 13 inlet~;
 #X obj 100 70 scale.lin 1 0 100;
 #X obj 100 130 outlet;
-#X connect 0 0 5 0;
-#X connect 2 0 4 0;
-#X connect 3 0 2 0;
-#X connect 4 0 0 0;
+#X obj 100 38 env~ 512;
+#X connect 0 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 5 0 3 0;
 #X coords 0 -1 1 1 94 18 2 100 100;

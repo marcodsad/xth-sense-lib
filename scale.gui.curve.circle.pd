@@ -1,13 +1,13 @@
-#N canvas 640 201 312 425 10;
-#X obj 100 100 cnv 15 80 19 empty empty empty 20 12 0 14 -191407 -66577
+#N canvas 392 225 312 425 10;
+#X obj 100 100 cnv 15 40 19 empty empty empty 20 12 0 14 -191407 -66577
 0;
 #X obj -36 288 inlet;
 #X obj -36 360 outlet;
-#X obj 105 102 nbx 3 15 0 10 0 0 empty empty empty 0 -8 0 8 -1 -262144
+#X obj 102 102 nbx 1 15 0 10 0 0 empty empty empty 0 -8 0 8 -1 -262144
 -1 5 256;
-#X obj 105 102 hsl 30 15 0 127 0 0 gdsfaf \$0-amount 5 0 8 0 8 -128992
+#X obj 105 102 hsl 15 15 0 127 0 0 gdsfaf \$0-amount 5 0 8 0 8 -128992
 -128992 -262144 0 1;
-#N canvas 514 375 339 236 label 0;
+#N canvas 520 398 339 236 label 0;
 #X obj 64 39 inlet;
 #X symbolatom 74 138 10 0 0 0 - - -;
 #X obj 64 114 makefilename %d;
@@ -21,11 +21,11 @@
 #X connect 3 0 5 0;
 #X connect 4 0 6 0;
 #X connect 6 0 2 0;
-#X restore 138 270 pd label;
+#X restore 135 262 pd label;
 #N canvas 6 47 450 300 (subpatch) 0;
 #X array \$0-curve 200 float 0;
-#X coords 0 1 199 0 40 15 1;
-#X restore 139 102 graph;
+#X coords 0 1 199 0 15 15 1;
+#X restore 124 102 graph;
 #N canvas 223 117 427 417 draw_array 0;
 #X msg 54 82 bang;
 #X obj 54 103 until;
@@ -58,31 +58,29 @@
 #X connect 11 0 7 0;
 #X connect 13 0 14 0;
 #X connect 14 0 8 0;
-#X restore 132 320 pd draw_array;
-#X obj 105 269 / 10;
-#X obj 105 294 t f f;
-#X obj 100 80 cnv 15 80 19 empty empty empty 20 12 0 14 -191407 -66577
-0;
-#X obj 105 222 t f f f;
-#X obj 105 196 spigot 0;
-#X msg 149 173 1;
-#X obj 105 12 init 5;
-#X obj 105 45 t f b;
+#X restore 129 312 pd draw_array;
+#X obj 102 261 / 10;
+#X obj 102 286 t f f;
+#X obj 102 214 t f f f;
+#X obj 102 188 spigot 0;
+#X msg 146 165 1;
+#X obj 102 12 init 5;
+#X obj 102 45 t f b;
 #X obj -26 146 xsssad \$1/curve;
 #X obj -36 322 flow.curve.circle;
-#X connect 1 0 17 0;
-#X connect 3 0 12 0;
+#X connect 1 0 16 0;
+#X connect 3 0 11 0;
 #X connect 8 0 9 0;
-#X connect 9 0 17 1;
+#X connect 9 0 16 1;
 #X connect 9 1 7 0;
-#X connect 11 0 8 0;
-#X connect 11 1 5 0;
-#X connect 11 2 16 1;
-#X connect 12 0 11 0;
-#X connect 13 0 12 1;
-#X connect 14 0 15 0;
+#X connect 10 0 8 0;
+#X connect 10 1 5 0;
+#X connect 10 2 15 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 1;
+#X connect 13 0 14 0;
+#X connect 14 0 3 0;
+#X connect 14 1 12 0;
 #X connect 15 0 3 0;
-#X connect 15 1 13 0;
-#X connect 16 0 3 0;
-#X connect 17 0 2 0;
-#X coords 0 -1 1 1 80 19 2 100 100;
+#X connect 16 0 2 0;
+#X coords 0 -1 1 1 40 19 2 100 100;
