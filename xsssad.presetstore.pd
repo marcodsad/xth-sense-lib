@@ -1,4 +1,4 @@
-#N canvas 638 47 912 795 10;
+#N canvas 656 47 912 795 10;
 #X text 80 1017 Hint: get creative with the [OSCroute] external!;
 #X obj 18 202 r \$0-load;
 #X text 418 131 This abstraction and all the other sssad state saving
@@ -94,14 +94,14 @@ my own.;
 #X obj 0 100 cnv 15 180 15 empty empty Scene 2 8 0 8 -191407 -33289
 0;
 #X obj 41 100 nbx 4 15 0 21 0 0 empty empty empty 0 -6 0 8 -1 -191407
--1 21 256;
+-1 0 256;
 #X obj 76 100 hradio 15 1 0 2 empty empty Load 3 8 0 8 -1 -1 -191407
-1;
+0;
 #X obj 107 100 bng 15 250 50 0 \$0-load empty empty 17 7 0 8 -128992
 -1 -1;
 #X obj 123 100 hradio 15 1 0 3 empty empty Save 8 8 0 8 -1 -1 -191407
 0;
-#X obj 165 100 bng 15 250 50 0 \$0-save empty empty 17 7 0 8 -128992
+#X obj 165 100 bng 15 250 50 0 \$0-save empty empty 17 7 0 8 -260097
 -66577 -1;
 #X obj 107 123 f;
 #X obj 107 145 s SCENE.LOAD;
