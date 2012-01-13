@@ -1,4 +1,4 @@
-#N canvas 611 322 680 265 10;
+#N canvas 617 345 680 265 10;
 #X obj 399 -39 loadbang;
 #X symbolatom 414 37 10 0 0 0 - - -;
 #X obj 468 123 s \$0-label;
