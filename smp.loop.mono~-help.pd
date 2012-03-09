@@ -1,0 +1,17 @@
+#N canvas 842 313 516 300 10;
+#X obj 36 57 smp.loop.mono~;
+#X obj 36 29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 117 28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 36 91 dac~;
+#X text 185 26 A loop player for pre-recorded audio samples;
+#X text 187 67 ARGUMENT;
+#X text 189 84 None;
+#X text 188 126 INLETS;
+#X text 188 162 Toggle loop on and off;
+#X text 188 143 Bang to choose a file from your computer;
+#X connect 0 0 3 0;
+#X connect 0 0 3 1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;

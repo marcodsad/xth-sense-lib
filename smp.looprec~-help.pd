@@ -1,0 +1,30 @@
+#N canvas 856 330 514 300 10;
+#X obj 15 33 osc~ 400;
+#X obj 86 55 gui.ead~;
+#X obj 86 29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 16 117 *~;
+#X obj 15 154 smp.looprec~;
+#X obj 15 199 dac~;
+#X obj 132 124 bng 15 250 50 0 empty empty Play 17 7 0 8 -262144 -1
+-1;
+#X obj 71 124 bng 15 250 50 0 empty empty Clear 17 7 0 8 -262144 -1
+-1;
+#X text 218 35 A real time recorder \; Feed an audio signal. The object
+\; records every time a new sound is produced \; Clear the recording
+with a bang.;
+#X text 222 108 INLETS;
+#X text 221 125 Audio signal;
+#X text 221 139 Bang to clear;
+#X text 221 154 Bang to play;
+#X text 223 199 OUTLETS;
+#X text 225 215 Right audio channel;
+#X text 224 230 Left audio channel;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 6 0 4 2;
+#X connect 7 0 4 1;

@@ -1,0 +1,30 @@
+#N canvas 862 376 604 384 10;
+#X obj 23 46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 24 164 dac~;
+#X text 277 94 ARGUMENT;
+#X text 279 111 None;
+#X text 278 153 INLETS;
+#X text 278 170 Bang to choose a file from your computer;
+#X obj 128 48 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 75 20 global/path/to/your/file;
+#X text 278 189 Message (global path to the file);
+#X text 280 207 Bang to play;
+#X text 279 239 OUTLETS;
+#X text 280 256 Audio;
+#X text 281 290 Bang when the playback is finished;
+#X text 280 306 Report only filename;
+#X text 281 324 Report global path to file;
+#X obj 23 74 smp.player.stereo~;
+#X text 281 271 Audio;
+#X obj 75 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 276 60 An audio player for pre-recorded stereo audio files.
+;
+#X connect 0 0 15 0;
+#X connect 6 0 15 2;
+#X connect 7 0 15 1;
+#X connect 15 0 1 0;
+#X connect 15 1 1 1;
+#X connect 15 2 17 0;

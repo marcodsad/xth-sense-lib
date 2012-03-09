@@ -1,0 +1,25 @@
+#N canvas 886 358 546 359 10;
+#X obj 46 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 47 117 dac~;
+#X text 197 77 ARGUMENT;
+#X text 199 94 None;
+#X text 198 136 INLETS;
+#X text 198 153 Bang to choose a file from your computer;
+#X obj 46 67 smp.player.mono~;
+#X obj 139 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 92 13 global/path/to/your/file;
+#X text 198 172 Message (global path to the file);
+#X text 200 190 Bang to play;
+#X text 199 222 OUTLETS;
+#X text 200 239 Audio;
+#X text 201 253 Bang when the playback is finished;
+#X text 200 269 Report only filename;
+#X text 201 287 Report global path to file;
+#X text 196 43 An audio player for pre-recorded mono audio files.;
+#X connect 0 0 6 0;
+#X connect 6 0 1 0;
+#X connect 6 0 1 1;
+#X connect 7 0 6 2;
+#X connect 8 0 6 1;

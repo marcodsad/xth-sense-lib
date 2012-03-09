@@ -1,4 +1,4 @@
-#N canvas 462 197 1150 551 10;
+#N canvas 102 142 908 551 10;
 #X msg 221 -152 stop;
 #X obj 60 -6 s \$0-record;
 #X obj 207 -176 r \$0-record;
@@ -70,31 +70,31 @@
 -1 -1;
 #X obj 189 -109 tabwrite~ \$0-sample;
 #X obj 58 -437 inlet~;
-#X obj 756 -267 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 608 -297 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 726 -304 inlet trigger;
+#X obj 578 -334 inlet trigger;
 #X obj 188 -84 table \$0-sample 88200;
-#X obj 256 -20 outlet env;
-#X obj 726 -181 *~ 4;
-#X obj 726 -237 tabplay~ \$0-sample;
-#X obj 319 -436 inlet reset-table-quick-fix;
-#X symbolatom 389 -270 10 0 0 0 - - -;
-#X obj 338 -250 makefilename %s-sample;
-#X msg 338 -180 \; \$1 const 0;
-#X symbolatom 435 -214 10 0 0 0 - - -;
-#X obj 338 -218 symbol;
-#X obj 338 -136 print RESET;
+#X obj 407 -3 outlet env;
+#X obj 578 -211 *~ 4;
+#X obj 578 -267 tabplay~ \$0-sample;
+#X obj 327 -432 inlet reset-table-quick-fix;
+#X symbolatom 397 -266 10 0 0 0 - - -;
+#X obj 346 -246 makefilename %s-sample;
+#X msg 346 -176 \; \$1 const 0;
+#X symbolatom 443 -210 10 0 0 0 - - -;
+#X obj 346 -214 symbol;
+#X obj 346 -132 print RESET;
 #X floatatom 134 -310 1 0 1 0 - - -;
 #X obj 223 -407 loadbang;
 #X msg 223 -343 1;
 #X msg 162 -343 0;
-#X obj 319 -413 t b b b;
-#X obj 319 -378 delay 15000;
-#X obj 401 -406 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 327 -409 t b b b;
+#X obj 327 -374 delay 15000;
+#X obj 409 -402 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 338 -297 tof/getdollarzero;
+#X obj 346 -293 tof/getdollarzero;
 #X obj 58 -289 utils.spigot.mono~;
-#X obj 727 -75 outlet~;
+#X obj 93 62 outlet~;
 #X obj 59 -179 hip~ 5;
 #X connect 0 0 12 0;
 #X connect 2 0 12 0;

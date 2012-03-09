@@ -1,4 +1,4 @@
-#N canvas 143 65 753 656 10;
+#N canvas 149 88 753 656 10;
 #X obj 150 52 openpanel;
 #X obj 208 336 soundfiler;
 #X msg 208 369 bang;
