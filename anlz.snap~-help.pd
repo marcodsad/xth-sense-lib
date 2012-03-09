@@ -1,0 +1,19 @@
+#N canvas 882 312 493 364 10;
+#X text 207 151 ARGUMENTS_;
+#X text 206 275 OUTLET;
+#X text 206 225 Audio input;
+#X text 206 209 INLETS;
+#X text 207 171 None;
+#X obj 27 67 anlz.snap~;
+#X obj 27 34 noise~;
+#X floatatom 27 115 5 0 0 0 - - -;
+#X floatatom 117 36 5 0 0 0 - - -;
+#X text 203 37 A GOP wrap of [snapshot~] \; It translates an audio
+input straight into \; control values. Set the speed of analysis with
+a number box;
+#X text 206 240 Speed in ms;
+#X text 206 291 Control values;
+#X text 203 93 Originally [anal.sig_~] from pdmtl lib.;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 8 0 5 1;

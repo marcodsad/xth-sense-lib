@@ -1,0 +1,24 @@
+#N canvas 700 270 681 421 10;
+#X declare -lib xthsense;
+#X obj 36 35 osc~ 200;
+#X obj 34 145 *~;
+#X obj 35 66 *~ 0.5;
+#X obj 49 118 utils.zipper~;
+#X obj 49 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 239 144 ARGUMENT;
+#X text 241 202 OUTLETS;
+#X obj 531 369 import xthsense;
+#X obj 33 279 dac~ 1;
+#X obj 33 249 mix.set.in~ 1;
+#X obj 34 173 send~ 1.l;
+#X text 244 33 A GUI wrap for a settable mono [receive~];
+#X text 242 51 Origin can be specified by argument;
+#X text 240 160 Origin identifier;
+#X text 243 218 Audio out;
+#X connect 0 0 2 0;
+#X connect 1 0 10 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 3 0;
+#X connect 9 0 8 0;

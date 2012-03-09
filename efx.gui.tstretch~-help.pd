@@ -1,30 +1,33 @@
-#N canvas 739 302 663 462 10;
-#X declare -lib sssad-lib;
+#N canvas 745 325 663 462 10;
 #X declare -lib xthsense;
-#X obj 37 -192 efx.gui.tstretch~;
-#X obj 308 -115 import sssad-lib;
-#X text 305 -201 I/O;
-#X obj 37 59 dac~;
-#X obj 36 -78 mix.ch.stereo~;
-#X obj 35 -315 osc~ 400;
-#X obj 105 -282 gui.ead~;
-#X obj 105 -337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 37 -177 efx.gui.tstretch~;
+#X text 303 -148 I/O;
+#X obj 37 74 dac~;
+#X obj 36 -63 mix.ch.stereo~;
+#X obj 105 -267 gui.ead~;
+#X obj 105 -322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 36 -232 *~;
-#X text 305 -183 Mono > Mono;
-#X obj 105 -310 t b b;
-#X text 304 -238 GOP and sssad wrap for timestretching and pitchshifting
+#X obj 36 -217 *~;
+#X text 303 -130 Mono > Mono;
+#X obj 105 -295 t b b;
+#X text 300 -213 GOP and sssad wrap for timestretching and pitchshifting
 ;
-#X text 304 -147 Needs sssad-lib;
 #X obj 492 78 import xthsense;
-#X connect 0 0 4 0;
-#X connect 0 0 4 1;
-#X connect 4 0 3 0;
-#X connect 4 1 3 1;
+#X text 302 -195 Send an audio signal \, click the red bang when you
+want \; to record. Play with parameters to make noise.;
+#X obj 35 -300 noise~;
+#X text 302 -85 INLET;
+#X text 304 -68 Audio signal;
+#X text 306 -53 Leftmost inlet is used to send a bang to record \,
+when you \; can't click the red bang by yourself.;
+#X connect 0 0 3 0;
+#X connect 0 0 3 1;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 4 0 6 1;
 #X connect 5 0 8 0;
-#X connect 6 0 8 1;
-#X connect 7 0 10 0;
-#X connect 8 0 0 0;
-#X connect 10 0 6 0;
-#X connect 10 1 0 2;
+#X connect 6 0 0 0;
+#X connect 8 0 4 0;
+#X connect 8 1 0 4;
+#X connect 12 0 6 0;
 #X coords 0 0 1 1 156 66 0;

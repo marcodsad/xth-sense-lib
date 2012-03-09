@@ -1,12 +1,12 @@
-#N canvas 650 167 633 416 10;
+#N canvas 656 190 633 416 10;
 #X declare -lib xthsense;
-#X text 200 101 I/O;
+#X text 222 176 I/O;
 #X obj 8 368 dac~;
 #X obj 7 231 mix.ch.stereo~;
 #X obj 6 137 efx.gui.delay~;
-#X text 199 64 GOP and sssad wrap for a simple feedback delay object
+#X text 221 139 GOP and sssad wrap for a simple feedback delay object
 ;
-#X text 200 119 Mono > Mono;
+#X text 222 194 Mono > Mono;
 #X obj 474 381 import xthsense;
 #X obj 5 23 osc~ 400;
 #X obj 76 45 gui.ead~;

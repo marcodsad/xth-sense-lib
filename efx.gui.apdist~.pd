@@ -1,7 +1,7 @@
-#N canvas 182 133 826 435 10;
-#X text 58 178 apdist: all pass distortion;
+#N canvas 188 156 864 443 10;
+#X text 150 46 apdist: all pass distortion;
 #X obj 432 96 inlet~;
-#N canvas 892 144 528 427 dsp 0;
+#N canvas 898 167 528 427 dsp 0;
 #X obj 395 67 inlet;
 #X obj 395 105 switch~;
 #X obj 441 54 loadbang;
@@ -46,14 +46,14 @@
 #X obj 100 117 gui.slider lop 15000 20;
 #X obj 100 134 gui.slider drive 500 0;
 #X obj 100 151 gui.slider mix 1 -1;
-#N canvas 240 244 627 317 original-LICENSE-BSD 0;
+#N canvas 258 313 627 317 original-LICENSE-BSD 0;
 #X text 121 56 This software is copyrighted by Miller Puckette \, Reality
 Jockey Ltd. and others. The terms (the "Standard Improved BSD License")
 apply to all files associated with the software unless explicitly disclaimed
 in individual files.;
 #X text 123 148 See the file LICENSE.txt for the full license text.
 ;
-#X restore 603 325 pd original-LICENSE-BSD;
+#X restore 608 344 pd original-LICENSE-BSD;
 #X obj 100 241 s \$0-lop;
 #X obj 100 262 s \$0-drive;
 #X obj 100 282 s \$0-mix;
@@ -63,6 +63,8 @@ in individual files.;
 #X obj 263 196 xsssad \$1/adist.lop;
 #X obj 263 216 xsssad \$1/adist.drv;
 #X obj 263 236 xsssad \$1/adist.mix;
+#X text 606 291 A GOP augmentation of the all pass \; distortion included
+in Rj library.;
 #X connect 1 0 2 0;
 #X connect 1 0 6 0;
 #X connect 2 0 6 1;

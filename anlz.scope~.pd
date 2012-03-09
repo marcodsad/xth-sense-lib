@@ -1,8 +1,8 @@
-#N canvas 667 243 609 485 10;
+#N canvas 207 224 609 485 10;
 #X obj 0 18 cnv 15 160 100 empty empty empty 20 12 0 14 -200717 -66577
 0;
-#N canvas 12 70 452 302 (subpatch) 0;
-#X array \$0-tabvue 160 float 0;
+#N canvas 18 93 452 302 (subpatch) 0;
+#X array \$0-tabscope 160 float 0;
 #X coords 0 1 159 -1 160 100 1;
 #X restore 0 18 graph;
 #X obj 398 62 switch~;
@@ -26,18 +26,18 @@
 -1 -1 0 1;
 #X obj 112 -27 init 60;
 #X obj 229 185 flow.sum;
-#X obj 269 302 s \$0-tabvue;
 #X obj 398 12 r \$0-s-on-off;
 #X obj 494 59 s \$0-s-on-off;
+#X obj 269 302 s \$0-tabscope;
 #X connect 3 0 4 0;
-#X connect 4 0 23 0;
+#X connect 4 0 22 0;
 #X connect 5 0 2 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 20 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
-#X connect 12 0 21 0;
+#X connect 12 0 23 0;
 #X connect 13 0 17 0;
 #X connect 14 0 13 0;
 #X connect 15 0 14 0;
@@ -46,5 +46,5 @@
 #X connect 17 0 10 1;
 #X connect 19 0 15 0;
 #X connect 20 0 10 0;
-#X connect 22 0 5 0;
+#X connect 21 0 5 0;
 #X coords 0 0 1 1 160 118 1 0 0;

@@ -1,0 +1,14 @@
+#N canvas 854 299 450 300 10;
+#X obj 30 132 flow.ascendent;
+#X floatatom 30 177 5 0 0 0 - - -;
+#X obj 30 57 anlz.snap~;
+#X obj 29 26 osc~ 3;
+#X text 188 90 Output only the ascendent part of \; a numerical stream.
+;
+#X text 184 137 INLET;
+#X text 185 155 Stream values;
+#X text 187 196 OUTLET;
+#X text 186 214 Ascendent stream values;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
