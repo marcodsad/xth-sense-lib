@@ -1,5 +1,4 @@
-#N canvas 839 353 468 325 10;
-#X declare -lib xthsense;
+#N canvas 845 376 468 325 10;
 #X obj 32 76 anlz.rms~;
 #X obj 32 35 osc~ 200;
 #X text 194 107 ARGUMENTS_;
@@ -13,6 +12,5 @@
 #X text 193 27 A GOP wrap of [env~] \; It reports the RMS of an audio
 signal \; Window size 512 samples. RMS is normalized \; between 0 and
 1;
-#X obj 296 291 import xthsense;
 #X connect 0 0 8 0;
 #X connect 1 0 0 0;

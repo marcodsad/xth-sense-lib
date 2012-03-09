@@ -1,5 +1,4 @@
-#N canvas 653 201 540 294 10;
-#X declare -lib xthsense;
+#N canvas 659 224 540 294 10;
 #X obj 57 89 midi.mono.synth~;
 #X text 234 95 ARGUMENT;
 #X text 236 165 INLET;
@@ -12,7 +11,6 @@
 #X obj 57 135 dac~;
 #X text 237 196 Velocity;
 #X floatatom 150 55 5 0 0 0 Vel - -;
-#X obj 435 268 import xthsense;
 #X connect 0 0 9 0;
 #X connect 0 0 9 1;
 #X connect 8 0 0 0;

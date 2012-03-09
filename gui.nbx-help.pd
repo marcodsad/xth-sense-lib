@@ -1,10 +1,8 @@
-#N canvas 757 437 368 196 10;
-#X declare -lib xthsense;
+#N canvas 763 460 368 196 10;
 #X obj 21 79 gui.nbx;
 #X floatatom 21 106 5 0 0 0 - - -;
 #X text 79 76 A GUI wrap of [nbx] number box.;
 #X floatatom 21 49 5 0 0 0 - - -;
-#X obj 249 154 import xthsense;
 #X connect 0 0 1 0;
 #X connect 3 0 0 0;
 #X coords 0 0 1 1 35 15 0;

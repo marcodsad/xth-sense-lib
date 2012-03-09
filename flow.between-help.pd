@@ -1,5 +1,4 @@
-#N canvas 592 213 470 320 10;
-#X declare -lib xthsense;
+#N canvas 598 236 470 320 10;
 #X obj 58 196 flow.between 20 50;
 #X obj 58 32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
@@ -17,7 +16,6 @@
 #X text 227 146 Stream of values;
 #X text 227 211 Values in or out of the range;
 #X text 223 19 Identifies value within a defined range;
-#X obj 358 288 import xthsense;
 #X connect 0 0 7 0;
 #X connect 0 1 8 0;
 #X connect 1 0 6 0;

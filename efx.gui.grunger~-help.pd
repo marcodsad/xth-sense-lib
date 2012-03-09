@@ -1,5 +1,4 @@
-#N canvas 497 240 620 384 10;
-#X declare -lib xthsense;
+#N canvas 503 263 620 384 10;
 #X obj -22 62 efx.gui.grunger~;
 #X text 186 119 I/O;
 #X text 186 137 Mono > Stereo;
@@ -8,12 +7,11 @@
 #X text 184 33 GOP and sssad wrap for a grunger object;
 #X text 184 54 Namely \, it includes a fuzz distortion > reverb > resonant
 filter > pitchshift;
-#X obj 465 341 import xthsense;
 #X obj -21 30 osc~ 90;
 #X connect 0 0 4 0;
 #X connect 0 1 4 1;
 #X connect 4 0 3 0;
 #X connect 4 1 3 1;
-#X connect 8 0 0 0;
-#X connect 8 0 0 1;
+#X connect 7 0 0 0;
+#X connect 7 0 0 1;
 #X coords 0 0 1 1 157 101 0;

@@ -1,5 +1,4 @@
-#N canvas 814 385 581 373 10;
-#X declare -lib xthsense;
+#N canvas 820 408 581 373 10;
 #X obj 17 151 print;
 #X text 207 22 Only reports a change in the incoming symbol.;
 #X obj 17 127 flow.schange;
@@ -14,7 +13,6 @@ one;
 #X msg 17 80 dog;
 #X msg 73 80 cat;
 #X msg 124 80 mouse;
-#X obj 464 335 import xthsense;
 #X connect 2 0 0 0;
 #X connect 10 0 2 0;
 #X connect 11 0 2 0;

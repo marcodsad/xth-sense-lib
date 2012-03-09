@@ -1,5 +1,4 @@
-#N canvas 941 326 450 300 10;
-#X declare -lib xthsense;
+#N canvas 947 349 450 300 10;
 #X obj 46 69 path.getdir;
 #X obj 46 100 print;
 #X obj 46 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -12,6 +11,5 @@
 #X text 156 91 None;
 #X text 157 141 Bang;
 #X text 157 205 Current global path (where this object lives);
-#X obj 339 274 import xthsense;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;

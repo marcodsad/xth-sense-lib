@@ -1,4 +1,4 @@
-#N canvas 877 462 593 357 10;
+#N canvas 568 334 593 357 10;
 #X declare -lib xthsense;
 #X obj 22 170 mix.send.stereo~ dog;
 #X obj 23 28 osc~ 200;
@@ -8,13 +8,10 @@
 #X obj 139 29 osc~ 400;
 #X obj 38 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X text 272 22 A wrap for a stereo sender;
 #X text 270 81 ARGUMENT;
 #X text 271 217 OUTLETS;
 #X text 272 151 INLETS;
 #X text 271 97 Receiver identifier;
-#X text 273 169 Stereo signal;
-#X text 273 184 Stereo signal;
 #X text 272 232 None;
 #X obj 25 226 mix.receive.stereo~ dog;
 #X obj 38 115 utils.zipper~;
@@ -25,15 +22,18 @@
 #X obj 140 141 *~;
 #X text 272 40 To be used with [mix.receive.stereo~];
 #X obj 469 324 import xthsense;
+#X text 272 22 A wrap for a settable stereo sender;
+#X text 272 168 Right audio channel;
+#X text 273 185 Left audio channel;
 #X connect 1 0 2 0;
-#X connect 2 0 17 0;
-#X connect 4 0 20 0;
+#X connect 2 0 14 0;
+#X connect 4 0 17 0;
 #X connect 5 0 4 0;
-#X connect 6 0 16 0;
-#X connect 15 0 3 0;
-#X connect 15 1 3 1;
+#X connect 6 0 13 0;
+#X connect 12 0 3 0;
+#X connect 12 1 3 1;
+#X connect 13 0 14 1;
+#X connect 14 0 0 0;
+#X connect 15 0 16 0;
 #X connect 16 0 17 1;
-#X connect 17 0 0 0;
-#X connect 18 0 19 0;
-#X connect 19 0 20 1;
-#X connect 20 0 0 1;
+#X connect 17 0 0 1;

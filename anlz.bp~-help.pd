@@ -1,16 +1,14 @@
-#N canvas 1005 307 524 404 10;
-#X declare -lib xthsense;
-#X obj 43 -8 anlz.bp~ 450 450;
-#X text 228 18 freq \, Q;
-#X text 228 -2 ARGUMENTS_;
-#X text 227 122 OUTLET;
-#X text 227 72 Audio input;
-#X obj 44 -64 noise~;
-#X text 227 138 Control values;
-#X text 227 56 INLETS;
-#X text 227 87 Speed in ms (default 100);
-#X text 227 -71 The audio input is fed to a simple stack \; of bandpass
+#N canvas 1011 330 524 404 10;
+#X obj 33 52 anlz.bp~ 450 450;
+#X text 218 78 freq \, Q;
+#X text 218 58 ARGUMENTS_;
+#X text 217 182 OUTLET;
+#X text 217 132 Audio input;
+#X obj 34 -4 noise~;
+#X text 217 198 Control values;
+#X text 217 116 INLETS;
+#X text 217 147 Speed in ms (default 100);
+#X text 217 -11 The audio input is fed to a simple stack \; of bandpass
 filters \, and transformed in control \; values.;
-#X obj 402 249 import xthsense;
 #X connect 5 0 0 0;
 #X coords 0 0 1 1 125 20 0;

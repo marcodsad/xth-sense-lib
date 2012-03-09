@@ -1,5 +1,4 @@
-#N canvas 998 255 604 368 10;
-#X declare -lib xthsense;
+#N canvas 825 292 587 380 10;
 #X obj 26 25 osc~ 200;
 #X obj 24 135 *~;
 #X obj 25 56 *~ 0.5;
@@ -8,7 +7,6 @@
 ;
 #X obj 23 269 dac~;
 #X obj 23 239 mix.catch.stereo~ ch.one;
-#X text 234 23 A GUI wrap for 2 stereo [throw~];
 #X obj 24 166 mix.set.ch~ one;
 #X text 229 134 ARGUMENT;
 #X text 230 270 OUTLETS;
@@ -16,12 +14,12 @@
 #X text 230 150 Receiver identifier;
 #X text 232 286 None;
 #X text 232 41 Destination can be specified by argument;
-#X obj 489 334 import xthsense;
 #X text 232 219 Right channel signal;
 #X text 231 235 Left channel signal;
+#X text 234 23 A GUI wrap for 2 settable stereo [throw~];
 #X connect 0 0 2 0;
-#X connect 1 0 8 0;
-#X connect 1 0 8 1;
+#X connect 1 0 7 0;
+#X connect 1 0 7 1;
 #X connect 2 0 1 0;
 #X connect 3 0 1 1;
 #X connect 4 0 3 0;

@@ -1,6 +1,4 @@
-#N canvas 922 363 562 398 10;
-#X declare -lib xthsense;
-#X obj 415 367 import xthsense;
+#N canvas 928 386 562 398 10;
 #X obj 25 27 osc~ 20;
 #X text 246 31 A scope visualizer. This is a slightly edited \; version
 of [anal.scope_~] in pdmtl library.;
@@ -11,4 +9,4 @@ of [anal.scope_~] in pdmtl library.;
 #X text 244 106 None;
 #X text 243 226 None;
 #X obj 24 66 anlz.scope~;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;

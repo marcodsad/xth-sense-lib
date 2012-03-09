@@ -1,5 +1,4 @@
-#N canvas 839 323 526 300 10;
-#X declare -lib xthsense;
+#N canvas 845 346 526 300 10;
 #X text 229 64 ARGUMENT;
 #X text 230 220 OUTLETS;
 #X text 231 134 INLETS;
@@ -16,7 +15,6 @@
 #X text 230 25 A fader for mono audio signals;
 #X text 231 152 Mono signal;
 #X text 231 166 Mono signal;
-#X obj 419 264 import xthsense;
 #X connect 5 0 9 0;
 #X connect 5 0 9 1;
 #X connect 6 0 8 0;

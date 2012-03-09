@@ -1,6 +1,4 @@
-#N canvas 728 272 458 359 10;
-#X declare -lib xthsense;
-#X obj 348 325 import xthsense;
+#N canvas 734 295 458 359 10;
 #X obj 35 299 dac~;
 #X obj 34 15 osc~ 300;
 #X obj 35 156 mix.ch.stereo~;
@@ -10,10 +8,10 @@
 #X text 225 53 A coseno stereo panner.;
 #X text 226 108 Stereo > Stereo;
 #X obj 88 44 osc~ 400;
-#X connect 2 0 6 0;
-#X connect 3 0 1 0;
-#X connect 3 1 1 1;
-#X connect 5 0 6 2;
-#X connect 6 0 3 0;
-#X connect 6 1 3 1;
-#X connect 9 0 6 1;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 2 1 0 1;
+#X connect 4 0 5 2;
+#X connect 5 0 2 0;
+#X connect 5 1 2 1;
+#X connect 8 0 5 1;

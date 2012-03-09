@@ -1,9 +1,7 @@
-#N canvas 793 428 588 211 10;
-#X declare -lib xthsense;
+#N canvas 799 451 588 211 10;
 #X obj 22 53 gui.bng;
 #X text 76 63 You can create a gif image to be used with this abstraction.
 ;
 #X text 77 81 See inside the object in the subpatch [pd msg];
 #X text 78 47 An alternative bang;
-#X obj 448 167 import xthsense;
 #X coords 0 0 1 1 34 29 0;

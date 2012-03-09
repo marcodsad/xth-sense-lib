@@ -1,5 +1,4 @@
-#N canvas 907 232 539 500 10;
-#X declare -lib xthsense;
+#N canvas 913 255 539 500 10;
 #X obj 18 131 efx.gui.freeverb~;
 #X obj 18 270 mix.ch.stereo~;
 #X obj 19 413 dac~;
@@ -12,7 +11,6 @@
 #X text 212 202 Stereo > Stereo;
 #X text 210 129 Here you have freeverb~ with a nice GUI \; and additional
 mix amount.;
-#X obj 386 445 import xthsense;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 1 0 2 0;

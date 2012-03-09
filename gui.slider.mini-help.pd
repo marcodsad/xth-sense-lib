@@ -1,5 +1,4 @@
-#N canvas 911 296 450 300 10;
-#X declare -lib xthsense;
+#N canvas 917 319 450 300 10;
 #X text 168 67 ARGUMENT;
 #X text 169 203 OUTLETS;
 #X text 169 83 Label;
@@ -13,7 +12,6 @@
 #X floatatom 34 74 5 0 0 0 - - -;
 #X obj 36 127 gui.slider.mini cat;
 #X obj 34 49 gui.slider.mini;
-#X obj 327 263 import xthsense;
 #X connect 8 0 12 1;
 #X connect 9 0 12 0;
 #X connect 12 0 10 0;

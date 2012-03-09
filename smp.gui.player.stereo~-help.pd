@@ -1,5 +1,4 @@
-#N canvas 883 350 613 308 10;
-#X declare -lib xthsense;
+#N canvas 579 337 613 308 10;
 #X text 230 23 A GUI sample player with customizable attack and decay
 ;
 #X text 230 81 ARGUMENT;
@@ -15,15 +14,14 @@
 #X obj 37 110 smp.gui.player.stereo~;
 #X text 233 163 Floats for volume (uses a MIDI range);
 #X msg 110 44 80;
-#X text 232 232 Stereo signal;
-#X text 232 248 Stereo signal;
 #X obj 38 245 dac~;
 #X text 233 266 Full path of the chosen sample;
 #X obj 95 200 print;
-#X obj 499 274 import xthsense;
+#X text 232 231 Right audio channel;
+#X text 233 248 Left audio channel;
 #X connect 6 0 9 0;
 #X connect 8 0 9 1;
-#X connect 9 0 14 0;
-#X connect 9 1 14 1;
-#X connect 9 2 16 0;
+#X connect 9 0 12 0;
+#X connect 9 1 12 1;
+#X connect 9 2 14 0;
 #X connect 11 0 9 1;

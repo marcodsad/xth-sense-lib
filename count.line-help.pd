@@ -1,5 +1,4 @@
-#N canvas 430 213 450 300 10;
-#X declare -lib xthsense;
+#N canvas 436 236 450 300 10;
 #X text 212 38 ARGUMENT;
 #X text 213 54 Time to reach target value;
 #X text 214 174 OUTLET;
@@ -11,7 +10,6 @@
 #X msg 88 42 0;
 #X obj 47 80 count.line 700;
 #X text 213 72 (default 200ms);
-#X obj 343 270 import xthsense;
 #X text 214 139 Time to reach the target value;
 #X text 214 108 INLETS;
 #X connect 3 0 9 0;

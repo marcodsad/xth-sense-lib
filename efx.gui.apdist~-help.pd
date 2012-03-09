@@ -1,5 +1,4 @@
-#N canvas 75 418 576 379 10;
-#X declare -lib xthsense;
+#N canvas 81 441 576 379 10;
 #X obj 32 79 efx.gui.apdist~;
 #X text 246 46 A GOP augmentation of the all pass \; distortion included
 in Rj library.;
@@ -8,7 +7,6 @@ in Rj library.;
 #X obj 32 308 dac~;
 #X text 248 101 I/O;
 #X text 248 119 Mono > Mono;
-#X obj 411 339 import xthsense;
 #X connect 0 0 3 0;
 #X connect 0 0 3 1;
 #X connect 2 0 0 0;

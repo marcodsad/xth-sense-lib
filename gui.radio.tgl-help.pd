@@ -1,5 +1,4 @@
-#N canvas 911 309 498 363 10;
-#X declare -lib xthsense;
+#N canvas 917 332 498 363 10;
 #X text 255 68 ARGUMENT;
 #X text 256 204 OUTLETS;
 #X text 256 84 Label;
@@ -15,7 +14,6 @@
 #X obj 33 147 gui.radio.tgl cat;
 #X floatatom 32 101 5 0 0 0 - - -;
 #X floatatom 180 99 5 0 0 0 - - -;
-#X obj 384 331 import xthsense;
 #X connect 9 0 11 0;
 #X connect 10 0 11 2;
 #X connect 11 0 13 0;

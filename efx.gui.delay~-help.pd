@@ -1,5 +1,4 @@
-#N canvas 656 190 633 416 10;
-#X declare -lib xthsense;
+#N canvas 662 213 633 416 10;
 #X text 222 176 I/O;
 #X obj 8 368 dac~;
 #X obj 7 231 mix.ch.stereo~;
@@ -7,7 +6,6 @@
 #X text 221 139 GOP and sssad wrap for a simple feedback delay object
 ;
 #X text 222 194 Mono > Mono;
-#X obj 474 381 import xthsense;
 #X obj 5 23 osc~ 400;
 #X obj 76 45 gui.ead~;
 #X obj 76 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -17,8 +15,8 @@
 #X connect 2 1 1 1;
 #X connect 3 0 2 0;
 #X connect 3 0 2 1;
-#X connect 7 0 10 0;
-#X connect 8 0 10 1;
-#X connect 9 0 8 0;
-#X connect 10 0 3 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 1;
+#X connect 8 0 7 0;
+#X connect 9 0 3 0;
 #X coords 0 0 1 1 156 66 0;

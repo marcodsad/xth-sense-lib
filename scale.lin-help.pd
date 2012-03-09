@@ -1,5 +1,4 @@
-#N canvas 592 188 597 435 10;
-#X declare -lib xthsense;
+#N canvas 598 211 597 435 10;
 #X floatatom 37 62 5 0 400 0 - - -;
 #X floatatom 37 132 5 0 0 0 - - -;
 #X obj 37 101 scale.lin 127 0 400;
@@ -17,7 +16,6 @@
 #X floatatom 37 192 5 0 127 0 - - -;
 #X floatatom 37 262 5 0 0 0 - - -;
 #X obj 37 231 scale.lin 0 200 127;
-#X obj 473 398 import xthsense;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 13 0 15 0;

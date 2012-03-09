@@ -1,4 +1,4 @@
-#N canvas 664 148 766 525 10;
+#N canvas 670 171 766 525 10;
 #X obj 100 100 cnv 15 125 20 empty empty empty 20 12 0 14 -133153 -66577
 0;
 #X obj 102 103 hradio 15 1 0 4 empty empty -- 6 8 0 8 -1 -1 -262144
@@ -11,8 +11,7 @@
 #X obj 102 -32 r \$0-init;
 #X obj 242 -52 loadbang;
 #X obj 242 -27 s \$0-init;
-#X obj 202 101 iemgui/iem_image /home/sad/00.Pd/projects/_Xth-Sense/dev/images/circ.button.off.gif
-0 0 empty empty;
+#X obj 202 101 iemgui/iem_image 0 0 0 empty empty;
 #N canvas 219 198 239 248 animation 0;
 #X obj 39 46 inlet on.off;
 #X msg 39 177 open \$1;
@@ -201,7 +200,7 @@ the list into a symbol;
 #X connect 3 0 0 0;
 #X connect 5 0 4 0;
 #X restore 410 130 pd open.close;
-#X obj 439 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 439 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 491 104 <<< workaround for scene loading;
 #X connect 2 0 35 0;

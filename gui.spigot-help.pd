@@ -1,10 +1,6 @@
-#N canvas 711 386 477 400 10;
-#X declare -lib sssad-lib;
-#X declare -lib xthsense;
+#N canvas 717 409 477 400 10;
 #X obj 36 112 gui.spigot;
 #X text 170 50 A GUI spigot;
-#X text 170 66 Needs sssad-lib;
-#X obj 277 68 import sssad-lib;
 #X text 170 101 ARGUMENT;
 #X text 171 237 OUTLETS;
 #X text 172 171 INLETS;
@@ -18,10 +14,9 @@
 #X floatatom 36 62 5 0 0 0 - - -;
 #X msg 64 83 0;
 #X msg 94 83 1;
-#X obj 351 365 import xthsense;
-#X connect 0 0 12 0;
-#X connect 0 1 13 0;
-#X connect 14 0 0 0;
-#X connect 15 0 0 1;
-#X connect 16 0 0 1;
+#X connect 0 0 10 0;
+#X connect 0 1 11 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 1;
+#X connect 14 0 0 1;
 #X coords 0 0 1 1 35 15 0;

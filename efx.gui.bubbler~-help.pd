@@ -1,6 +1,5 @@
-#N canvas 404 276 664 436 10;
+#N canvas 410 299 664 436 10;
 #X declare -lib soundhack;
-#X declare -lib xthsense;
 #X text 237 23 GOP and sssad wrap for [+bubbler] \, included in;
 #X text 238 37 Soundhack modules ported to Pd by:;
 #X text 237 51 Tom Erbe \, William Brent \, Daniel Arias \,;
@@ -18,7 +17,6 @@ of each grain can be controlled.;
 #X text 241 264 I/O;
 #X text 241 282 Mono > Mono;
 #X obj 29 259 mix.ch.stereo~;
-#X obj 560 410 import xthsense;
 #X text 241 330 Needs soundhack;
 #X connect 5 0 13 0;
 #X connect 5 0 13 1;

@@ -1,6 +1,5 @@
-#N canvas 637 234 615 534 10;
+#N canvas 643 257 615 534 10;
 #X declare -lib soundhack;
-#X declare -lib xthsense;
 #X text 201 248 I/O;
 #X obj -1 470 dac~;
 #X obj -2 333 mix.ch.stereo~;
@@ -18,7 +17,6 @@
 #X text 191 103 GOP and sssad wrap for [+pitchdelay~] \, included in
 ;
 #X obj 200 323 import soundhack;
-#X obj 482 498 import xthsense;
 #X text 199 302 Needs soundhack;
 #X connect 2 0 1 0;
 #X connect 2 1 1 1;

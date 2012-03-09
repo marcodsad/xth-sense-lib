@@ -1,6 +1,4 @@
-#N canvas 889 373 509 300 10;
-#X declare -lib xthsense;
-#X obj 395 272 import xthsense;
+#N canvas 895 396 509 300 10;
 #X obj 32 120 anlz.rhythm;
 #X obj 32 18 phasor~ 300;
 #X obj 32 50 anlz.rms~;
@@ -18,8 +16,8 @@
 #X text 211 13 Set a threshold \; When the input stream goes over \;
 that threshold X times \, you get a bang \; A simple way to track the
 rhythm of a signal.;
-#X connect 1 0 6 0;
-#X connect 2 0 3 0;
-#X connect 3 0 1 0;
-#X connect 4 0 1 1;
-#X connect 5 0 1 2;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;

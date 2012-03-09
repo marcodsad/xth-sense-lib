@@ -1,5 +1,4 @@
-#N canvas 120 195 658 423 10;
-#X declare -lib xthsense;
+#N canvas 126 218 658 423 10;
 #X obj -108 114 efx.gui.pshift.ssb~;
 #X text 99 186 I/O;
 #X obj -106 360 dac~;
@@ -9,7 +8,6 @@
 #X text 97 116 From Pd audio example H09.ssb.modulation;
 #X text 98 81 GOP and sssad wrap for a single sideband modulation aka
 pitch shifting;
-#X obj 435 385 import xthsense;
 #X connect 0 0 3 0;
 #X connect 0 1 3 1;
 #X connect 3 0 2 0;

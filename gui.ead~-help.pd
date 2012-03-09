@@ -1,5 +1,4 @@
-#N canvas 762 399 454 327 10;
-#X declare -lib xthsense;
+#N canvas 768 422 454 327 10;
 #X obj 65 75 gui.ead~;
 #X text 167 12 A GUI wrap for the [ead~] object;
 #X text 167 65 ARGUMENT;
@@ -13,7 +12,6 @@
 #X text 168 81 None;
 #X text 169 152 Bang (start the envelope);
 #X text 169 217 Signal envelope;
-#X obj 343 296 import xthsense;
 #X connect 0 0 6 1;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;

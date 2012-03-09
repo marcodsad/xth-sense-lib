@@ -1,5 +1,4 @@
-#N canvas 517 242 530 414 10;
-#X declare -lib xthsense;
+#N canvas 523 265 530 414 10;
 #X obj 36 119 efx.gui.pan.cos.mono~;
 #X obj 36 335 dac~;
 #X obj 35 51 osc~ 300;
@@ -7,7 +6,6 @@
 #X text 234 90 I/O;
 #X text 234 108 Mono > Stereo;
 #X text 233 53 GOP and sssad wrap for a coseno panner.;
-#X obj 414 381 import xthsense;
 #X connect 0 0 3 0;
 #X connect 0 1 3 1;
 #X connect 2 0 0 0;

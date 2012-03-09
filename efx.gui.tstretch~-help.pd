@@ -1,5 +1,4 @@
-#N canvas 745 325 663 462 10;
-#X declare -lib xthsense;
+#N canvas 751 348 663 462 10;
 #X obj 37 -177 efx.gui.tstretch~;
 #X text 303 -148 I/O;
 #X obj 37 74 dac~;
@@ -12,7 +11,6 @@
 #X obj 105 -295 t b b;
 #X text 300 -213 GOP and sssad wrap for timestretching and pitchshifting
 ;
-#X obj 492 78 import xthsense;
 #X text 302 -195 Send an audio signal \, click the red bang when you
 want \; to record. Play with parameters to make noise.;
 #X obj 35 -300 noise~;
@@ -29,5 +27,5 @@ when you \; can't click the red bang by yourself.;
 #X connect 6 0 0 0;
 #X connect 8 0 4 0;
 #X connect 8 1 0 4;
-#X connect 12 0 6 0;
+#X connect 11 0 6 0;
 #X coords 0 0 1 1 156 66 0;

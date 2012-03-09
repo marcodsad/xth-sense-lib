@@ -1,6 +1,5 @@
-#N canvas 103 237 556 368 10;
+#N canvas 109 260 556 368 10;
 #X declare -lib mrpeach;
-#X declare -lib xthsense;
 #X obj 30 82 efx.gui.chorus~;
 #X text 235 69 I/O;
 #X text 235 87 Mono > Stereo;
@@ -8,7 +7,6 @@
 #X obj 30 323 dac~;
 #X obj 29 186 mix.ch.stereo~;
 #X obj 29 29 osc~ 400;
-#X obj 424 341 import xthsense;
 #X connect 0 0 5 0;
 #X connect 0 1 5 1;
 #X connect 5 0 4 0;
