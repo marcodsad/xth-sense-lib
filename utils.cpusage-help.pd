@@ -1,0 +1,6 @@
+#N canvas 543 278 573 217 10;
+#X obj 28 55 utils.cpusage;
+#X text 228 48 Display CPU usage in % \; and video frames per second
+if GEM is in use.;
+#X text 229 90 I think the frame counter was once posted to \; the
+Pd list by Cyrille Henry.;

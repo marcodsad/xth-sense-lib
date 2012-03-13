@@ -1,0 +1,27 @@
+#N canvas 723 296 582 400 10;
+#X obj 46 51 utils.gui.showpatch apple Apple;
+#N canvas 247 321 450 300 apple 0;
+#X text 45 66 Yeah!;
+#X restore 48 80 pd apple;
+#X text 279 200 INLETS;
+#X text 277 130 ARGUMENTS;
+#X text 277 146 Subpatch name;
+#X text 277 163 Label;
+#X text 279 216 Subpatch name;
+#X text 279 233 Label;
+#X text 280 281 Bang;
+#X text 278 264 OUTLET;
+#X obj 48 178 utils.gui.showpatch kiwi Kiwi;
+#N canvas 265 390 450 300 kiwi 0;
+#X text 45 66 OH Yeah!;
+#X restore 49 213 pd kiwi;
+#X msg 115 151 Volume;
+#X msg 89 127 my-volume-subpatch;
+#N canvas 18 93 450 300 my-volume-subpatch 0;
+#X text 95 64 THIS IS A FAKE VOLUME SUBPATCH. IT WORKS!;
+#X restore 50 251 pd my-volume-subpatch;
+#X text 273 46 This fancy GOP allows you to pop up any \; subpatch
+you created with a single click \; this object can also be set with
+new arguments \; after creation.;
+#X connect 12 0 10 1;
+#X connect 13 0 10 0;

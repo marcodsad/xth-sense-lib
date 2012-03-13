@@ -1,15 +1,17 @@
-#N canvas 947 349 450 300 10;
-#X obj 46 69 path.getdir;
-#X obj 46 100 print;
-#X obj 46 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 995 346 579 300 10;
+#X obj 27 81 path.getdir;
+#X obj 27 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 153 28 A wrap for [getdir] \,;
-#X text 152 45 it's handy as it comes with an embed [loadbang];
-#X text 155 75 ARGUMENT;
-#X text 156 191 OUTLETS;
-#X text 157 125 INLETS;
-#X text 156 91 None;
-#X text 157 141 Bang;
-#X text 157 205 Current global path (where this object lives);
-#X connect 0 0 1 0;
-#X connect 2 0 0 0;
+#X text 264 27 A wrap for [getdir] \,;
+#X text 266 74 ARGUMENT;
+#X text 267 190 OUTLETS;
+#X text 268 124 INLETS;
+#X text 267 90 None;
+#X text 268 140 Bang;
+#X text 268 204 Current global path (where this object lives);
+#X obj 27 200 prepend set;
+#X msg 27 237 /home/sad/pd-externals/xth-sense-lib;
+#X text 263 44 it's handy as it comes with an embedded [loadbang];
+#X connect 0 0 9 0;
+#X connect 1 0 0 0;
+#X connect 9 0 10 0;

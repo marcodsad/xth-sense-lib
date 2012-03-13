@@ -1,0 +1,26 @@
+#N canvas 507 349 766 349 10;
+#X obj 43 20 utils.openit;
+#X obj 43 123 soundfiler;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array array1 77971 float 0;
+#X coords 0 1 77971 -1 200 100 1;
+#X restore 42 185 graph;
+#N canvas 127 117 344 248 visualize-audio-file 0;
+#X msg 55 92 read \$1 array1;
+#X obj 55 48 inlet;
+#X obj 55 152 outlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X restore 43 96 pd visualize-audio-file;
+#X obj 69 62 print GLOBAL.PATH;
+#X text 284 167 OUTLETS;
+#X text 285 101 INLETS;
+#X text 285 117 None;
+#X text 285 182 Message [open \$1( where \$1 is the file you select.
+;
+#X text 282 37 GUI button to open a files for [pix_film] \, [soundfiler]
+\; and co. with just one click. It also outputs the path of \; the
+selected file.;
+#X connect 0 0 3 0;
+#X connect 0 1 4 0;
+#X connect 3 0 1 0;

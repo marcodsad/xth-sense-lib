@@ -1,0 +1,19 @@
+#N canvas 554 311 450 300 10;
+#X obj 33 56 utils.gui.switch~;
+#X text 35 26 Click me!;
+#X floatatom 59 86 5 0 0 0 - - -;
+#X obj 33 111 switch~;
+#X obj 36 162 osc~ 200;
+#X obj 37 190 *~ 0.5;
+#X obj 38 217 dac~;
+#X text 175 46 A GUI button. It is designed to be used \; with [switch~]
+\, although it simply outputs \; 0 or 1 when you click it.;
+#X text 177 187 OUTLETS;
+#X text 178 121 INLETS;
+#X text 178 137 None;
+#X text 178 202 0 or 1;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;

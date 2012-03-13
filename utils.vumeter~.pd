@@ -1,27 +1,29 @@
-#N canvas 149 250 625 369 10;
-#X obj -155 136 *~;
-#X obj 211 125 cnv 15 27 119 empty empty empty 20 12 0 14 -133153 -262144
+#N canvas 106 299 826 543 10;
+#X obj 323 162 *~;
+#X obj 197 90 cnv 15 24 119 empty empty empty 20 12 0 14 -133153 -262144
 0;
-#X obj 215 132 vsl 8 100 0 1 0 0 szgzfsg cnhxcvnc empty 0 -9 0 10 -24967
+#X obj 200 97 vsl 8 100 0 1 0 0 szgzfsg cnhxcvnc empty 0 -9 0 10 -24967
 -24967 -1 0 1;
-#X obj 225 132 vsl 8 100 0 1 0 0 szgzfsg vcbcv empty 0 -9 0 10 -24967
+#X obj 210 97 vsl 8 100 0 1 0 0 szgzfsg vcbcv empty 0 -9 0 10 -24967
 -24967 -1 0 1;
 #X obj 211 199 cnv 6 6 1 empty \$0-right empty 20 12 0 14 -24198 -24198
 0;
-#X obj 201 198 cnv 6 6 1 empty \$0-left empty 20 12 0 14 -24198 -24198
+#X obj 201 199 cnv 6 6 1 empty \$0-left empty 20 12 0 14 -24198 -24198
 0;
-#X obj -154 52 inlet~ l;
-#X obj -64 51 inlet~ r;
-#X obj -63 138 *~;
-#X obj -155 288 outlet~ l;
-#X obj -63 289 outlet~ r;
-#N canvas 156 149 627 491 animation 0;
+#X obj 324 78 inlet~ l;
+#X obj 414 77 inlet~ r;
+#X obj 415 164 *~;
+#X obj 197 201 cnv 15 24 15 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 430 136 utils.zipper~;
+#X obj 523 109 t f f;
+#N canvas 397 146 627 491 animation 0;
 #X obj 282 42 inlet;
 #X obj 56 41 inlet~;
 #X obj 116 41 inlet~;
 #X obj 55 72 peakenv~ 1000;
 #X obj 55 353 snapshot~;
-#N canvas 860 238 734 553 size&color 0;
+#N canvas 860 261 734 553 size&color 0;
 #X obj 85 -10 inlet;
 #X obj 282 173 moses 50;
 #X obj 88 121 t f f;
@@ -44,7 +46,7 @@
 #X floatatom 107 201 5 0 0 0 - - -;
 #X floatatom 132 340 5 0 0 0 - - -;
 #X msg 68 379 pos 201 \$1;
-#X obj 117 280 scale.linear 100 200 100;
+#X obj 116 280 scale.lin 100 200 100;
 #X connect 0 0 10 0;
 #X connect 1 0 3 0;
 #X connect 1 1 8 0;
@@ -79,31 +81,31 @@
 #X obj 117 354 snapshot~;
 #X msg 309 190 0;
 #X obj 384 251 metro 200;
-#X obj 282 138 tgl 15 0 empty empty S 4 7 0 8 -262144 -1 -1 1 1;
+#X obj 282 138 tgl 15 0 empty empty S 4 7 0 8 -262144 -1 -1 0 1;
 #N canvas 860 289 734 553 size&color 0;
-#X obj 90 14 inlet;
-#X obj 282 173 moses 50;
-#X obj 88 121 t f f;
-#X msg 284 204 0;
-#X msg 333 216 1;
-#X obj 315 271 sel 0 1 2;
+#X obj 50 14 inlet;
+#X obj 283 165 moses 50;
+#X obj 50 134 t f f;
+#X msg 283 192 0;
+#X msg 328 216 1;
+#X obj 313 271 sel 0 1 2;
 #X obj 313 243 change -1;
-#X msg 384 221 2;
-#X obj 333 194 moses 90;
-#X obj 87 96 + 1;
-#X obj 85 34 change -1;
-#X obj 86 53 clip 0 1;
-#X obj 96 74 * 100;
-#X msg 313 321 color 16 16 16;
-#X msg 421 321 color 14 14;
-#X msg 510 324 color 13 13 13;
-#X obj 67 178 * 1;
-#X msg 58 246 vis_size 6 \$1;
-#X floatatom 107 201 5 0 0 0 - - -;
-#X floatatom 132 340 5 0 0 0 - - -;
-#X obj 30 485 s \$0-right;
-#X msg 68 379 pos 211 \$1;
-#X obj 119 301 scale.lin 100 200 100;
+#X msg 373 216 2;
+#X obj 328 191 moses 90;
+#X obj 50 105 + 1;
+#X obj 50 36 change -1;
+#X obj 50 59 clip 0 1;
+#X obj 50 82 * 100;
+#X msg 313 314 color 16 16 16;
+#X msg 421 314 color 14 14;
+#X msg 510 314 color 13 13 13;
+#X obj 50 167 * 1;
+#X msg 50 257 vis_size 6 \$1;
+#X floatatom 81 191 5 0 0 0 - - -;
+#X floatatom 140 300 5 0 0 0 - - -;
+#X obj 50 437 s \$0-right;
+#X msg 126 352 pos 211 \$1;
+#X obj 126 278 scale.lin 100 200 100;
 #X connect 0 0 10 0;
 #X connect 1 0 3 0;
 #X connect 1 1 8 0;
@@ -158,23 +160,15 @@
 #X connect 17 0 5 0;
 #X connect 17 1 12 0;
 #X connect 17 2 10 0;
-#X restore 3 181 pd animation;
-#X obj 211 236 cnv 15 45 15 empty empty empty 20 12 0 14 -128992 -66577
-0;
-#X obj -48 110 utils.zipper~;
-#X obj 45 58 r \$0-dsp;
-#X obj 45 83 t f f;
-#X msg 5 35 1;
-#X connect 0 0 11 0;
-#X connect 0 0 9 0;
+#X restore 481 217 pd animation;
+#X obj 523 77 inlet on-off;
+#X connect 0 0 12 0;
 #X connect 6 0 0 0;
 #X connect 7 0 8 0;
-#X connect 8 0 11 1;
-#X connect 8 0 10 0;
-#X connect 13 0 0 1;
-#X connect 13 0 8 1;
-#X connect 14 0 15 0;
-#X connect 15 0 13 0;
-#X connect 15 1 11 2;
-#X connect 16 0 15 0;
-#X coords 0 -1 1 1 27 120 2 100 100;
+#X connect 8 0 12 1;
+#X connect 10 0 0 1;
+#X connect 10 0 8 1;
+#X connect 11 0 10 0;
+#X connect 11 1 12 2;
+#X connect 13 0 11 0;
+#X coords 0 -1 1 1 26 126 2 196 90;

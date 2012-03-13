@@ -1,0 +1,24 @@
+#N canvas 515 279 450 300 10;
+#X obj 36 65 gui.slider.tgl;
+#X obj 36 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X floatatom 110 20 5 0 0 0 - - -;
+#X floatatom 184 119 5 0 0 0 - - -;
+#X obj 36 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 184 22 dog;
+#X text 252 64 ARGUMENT;
+#X text 253 210 OUTLETS;
+#X text 253 80 Label;
+#X text 254 176 Label;
+#X text 254 134 INLETS;
+#X text 254 150 Float number;
+#X text 254 225 Float number;
+#X text 251 25 GUI midi slider with toggle;
+#X text 254 162 Float number;
+#X text 254 240 Float number;
+#X connect 0 0 4 0;
+#X connect 0 1 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 5 0 0 2;

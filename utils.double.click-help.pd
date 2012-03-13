@@ -1,0 +1,20 @@
+#N canvas 712 355 540 301 10;
+#X obj 28 81 utils.double.click;
+#X obj 28 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 28 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 133 49 5 0 0 0 - - -;
+#X text 200 40 Detect a double click and output a bang \; You can set
+the time between the two clicks.;
+#X text 202 89 ARGUMENT;
+#X text 204 225 OUTLETS;
+#X text 204 149 INLETS;
+#X text 203 105 None;
+#X text 204 165 Bang;
+#X text 205 181 Time between first and second click (default 200ms)
+;
+#X text 205 240 Bang on double click only.;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;

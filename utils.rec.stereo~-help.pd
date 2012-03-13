@@ -1,0 +1,32 @@
+#N canvas 6 47 679 529 10;
+#X obj 33 202 utils.rec.mono~ name-of-the-folder;
+#X text 306 301 ARGUMENT;
+#X text 310 437 OUTLETS;
+#X text 308 360 INLETS;
+#X text 307 317 Name of the folder in which to store the recorded file
+;
+#X floatatom 36 147 5 0 0 0 - - -;
+#X obj 37 77 osc~ 350;
+#X obj 135 80 tgl 15 0 empty empty record 17 7 0 8 -262144 -1 -1 0
+1;
+#X text 309 392 Toggle start/stop recording;
+#X text 311 452 Number of recorded files;
+#X text 305 101 For instance \, imagine that the cool patch you are
+working \; on lives in a folder called COOLSTUFF. Inside this folder
+\; you want to create a subfolder called RECORDINGS \; Then \, add
+[utils.rec.mono~ RECORDINGS] to your patch \; (specifying RECORDINGS
+as an argument) and you are done.;
+#X text 306 186 [utils.rec.mono~] will automatically name the recorded
+\; files in chronological order. However \, it does not \; includes
+timestamp. Which means that when you close your \; patch is better
+to move the recorded files in another \; folder \, otherwise next time
+they will be overwritten.;
+#X obj 36 113 utils.rec.stereo~;
+#X text 305 31 A stereo audio recorder \; Specify the name of a subfolder
+that lives \; inside your working folder \, and you will find \; the
+recorded file/s there.;
+#X text 308 376 Audio stereo channel;
+#X connect 6 0 12 0;
+#X connect 6 0 12 1;
+#X connect 7 0 12 2;
+#X connect 12 0 5 0;

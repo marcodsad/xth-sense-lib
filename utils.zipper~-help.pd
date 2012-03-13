@@ -1,0 +1,19 @@
+#N canvas 586 215 537 300 10;
+#X obj 63 86 utils.zipper~;
+#X text 201 37 This is used to be able to smoothly convert \; control
+data into the audio signal domain.;
+#X obj 24 23 osc~ 200;
+#X obj 23 118 *~;
+#X floatatom 63 58 5 0 0 0 - - -;
+#X text 203 79 Very handy to control the volume of a signal \; with
+a number box \, without hearing clicks \; (the "zip" effect).;
+#X obj 23 176 dac~;
+#X text 206 209 OUTLETS;
+#X text 207 143 INLETS;
+#X text 207 159 Control value;
+#X text 207 224 Audio signal;
+#X connect 0 0 3 1;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 3 0 6 1;
+#X connect 4 0 0 0;

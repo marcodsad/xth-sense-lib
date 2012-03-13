@@ -1,0 +1,23 @@
+#N canvas 449 335 586 360 10;
+#X text 277 97 ARGUMENT;
+#X text 278 213 OUTLETS;
+#X text 279 147 INLETS;
+#X text 278 113 None;
+#X text 279 163 Bang;
+#X text 279 227 Current global path (where this object lives);
+#X obj 36 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 36 195 prepend set;
+#N canvas 6 47 336 273 path.get.dir.parent.is.inside 0;
+#X obj 66 45 inlet;
+#X obj 66 185 outlet;
+#X obj 66 107 path.getdir.parent;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X restore 36 82 pd path.get.dir.parent.is.inside;
+#X msg 36 242 /home/sad/pd-externals/xth-sense-lib;
+#X text 275 30 A wrap for [getdir] when used in a subpatch \,;
+#X text 274 47 it's handy as it comes with an embedded [loadbang];
+#X connect 6 0 8 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;

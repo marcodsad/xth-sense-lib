@@ -1,0 +1,23 @@
+#N canvas 224 193 807 538 10;
+#X floatatom 55 230 5 0 0 1 Midi_value - -;
+#X floatatom 441 227 5 0 0 1 Midi_value - -;
+#X obj 371 122 gui.spigot;
+#X text 62 323 This is a MIDI sequencer. It generates MIDI values \;
+according to a series of input slider \; It counts bpm and bars \;
+You can also use one seq16 as a master \, to control \; the bpm of
+another seq16 \; Simply connect the rightmost outlet of the first \;
+seq16 to the first inlet of the second seq16 \; The S toggle will light
+up to tell you is a slave.;
+#X obj 55 48 midi.seq16;
+#X obj 441 48 midi.seq16;
+#X text 455 320 ARGUMENT;
+#X text 456 456 OUTLETS;
+#X text 457 390 INLETS;
+#X text 456 336 None;
+#X text 456 471 MIDI value;
+#X text 457 406 Master time input;
+#X text 456 486 Master time output;
+#X connect 2 0 5 0;
+#X connect 4 0 0 0;
+#X connect 4 1 2 0;
+#X connect 5 0 1 0;

@@ -1,0 +1,16 @@
+#N canvas 648 240 450 300 10;
+#X obj 39 113 utils.vumeter;
+#X obj 38 57 osc~ 300;
+#X obj 83 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 165 54 Display a visual representation of \; the signal peak
+envelope \; The original idea is from PdMtl \, I gave it \; another
+look and changed few things.;
+#X text 165 195 OUTLETS;
+#X text 166 129 INLETS;
+#X text 166 145 Audio stereo signal;
+#X text 167 161 Toggle on/off;
+#X text 166 210 None;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 2;
