@@ -1,5 +1,5 @@
-#N canvas 890 557 349 285 10;
-#N canvas 878 395 259 226 make.label.value 1;
+#N canvas 902 557 349 285 10;
+#N canvas 884 418 259 226 make.label.value 0;
 #X obj 62 40 inlet;
 #X obj 62 159 s \$0-label;
 #X msg 62 130 label \$1;

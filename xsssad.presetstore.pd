@@ -1,4 +1,4 @@
-#N canvas 668 47 912 795 10;
+#N canvas 541 47 912 616 10;
 #X text 80 1017 Hint: get creative with the [OSCroute] external!;
 #X obj 18 202 r \$0-load;
 #X text 418 131 This abstraction and all the other sssad state saving
@@ -26,7 +26,7 @@ my own.;
 #X msg 264 616 clear;
 #N canvas 0 0 826 516 patch_send 0;
 #X msg 364 176 set \, addsemi;
-#X msg 87 408 \; pd-presetstore9 connect 0 0 1 0;
+#X msg 87 408 \; pd-presetstore2 connect 0 0 1 0;
 #X obj 86 21 inlet;
 #X obj 56 68 t b a b b;
 #X obj 407 33 inlet;
@@ -52,7 +52,7 @@ my own.;
 #X restore 206 755 pd patch_send;
 #N canvas 6 47 826 516 msg_data 0;
 #X msg 364 176 set \, addsemi;
-#X msg 87 408 \; presetstore9 add SSSAD_ADMIN set;
+#X msg 87 408 \; presetstore2 add SSSAD_ADMIN set;
 #X obj 143 136 float;
 #X obj 145 168 makefilename presetstore%d;
 #X obj 86 21 inlet;
@@ -80,7 +80,7 @@ my own.;
 #X msg 206 669 obj 10 10 r \$1;
 #X obj 48 629 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X msg 18 358 \; presetstore2 bang;
+#X msg 18 358 \; presetstore10 bang;
 #X msg 58 311 add2 \$1 bang;
 #X obj 314 192 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
@@ -88,24 +88,31 @@ my own.;
 -1 -1 0;
 #X obj 314 228 + 4;
 #X floatatom 427 440 5 0 0 0 - - -;
-#X obj 13 5 inlet;
-#X obj 13 58 t b f;
-#X obj 13 32 change;
+#X obj 14 -31 inlet;
+#X obj 14 22 t b f;
+#X obj 14 -4 change;
 #X obj 0 100 cnv 15 180 15 empty empty Scene 2 8 0 8 -191407 -33289
 0;
 #X obj 76 100 hradio 15 1 0 2 empty empty Load 3 8 0 8 -1 -1 -191407
 0;
-#X obj 107 100 bng 15 250 50 0 \$0-load empty empty 17 7 0 8 -128992
--1 -1;
+#X obj 107 100 bng 15 250 50 0 empty empty empty 17 7 0 8 -128992 -1
+-1;
 #X obj 123 100 hradio 15 1 0 3 empty empty Save 8 8 0 8 -1 -1 -191407
 0;
 #X obj 165 100 bng 15 250 50 0 \$0-save empty empty 17 7 0 8 -260097
 -66577 -1;
-#X obj 107 123 f;
-#X obj 107 145 s SCENE.LOAD;
-#X obj 40 100 gui.nbx;
+#X obj 156 166 f;
+#X obj 157 242 s SCENE.LOAD;
+#X obj 41 100 gui.nbx;
 #X text 306 58 A GUI wrap of [nbx] number box.;
-#X obj 73 35 init 0;
+#X obj 73 -1 init 0;
+#X obj 156 119 t b b;
+#X obj 244 223 s \$0-load;
+#X obj 205 187 t f b;
+#X obj 243 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 211 140 s bypass-main-out;
+#X obj 156 140 del 300;
 #X connect 1 0 16 0;
 #X connect 4 0 6 0;
 #X connect 5 0 10 0;
@@ -146,9 +153,15 @@ my own.;
 #X connect 37 0 41 0;
 #X connect 37 1 46 0;
 #X connect 38 0 37 0;
-#X connect 41 0 44 0;
-#X connect 44 0 45 0;
+#X connect 41 0 49 0;
+#X connect 44 0 51 0;
 #X connect 46 0 44 1;
 #X connect 46 0 21 0;
 #X connect 48 0 46 0;
+#X connect 49 0 54 0;
+#X connect 49 1 52 0;
+#X connect 49 1 53 0;
+#X connect 51 0 45 0;
+#X connect 51 1 50 0;
+#X connect 54 0 44 0;
 #X coords 0 -1 1 1 180 15 2 0 100;

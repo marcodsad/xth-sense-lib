@@ -1,4 +1,4 @@
-#N canvas 665 211 646 550 10;
+#N canvas 677 257 646 550 10;
 #X obj 100 100 cnv 15 120 20 empty empty empty 20 12 0 14 -133153 -66577
 0;
 #X obj 158 103 hradio 15 1 0 4 empty empty -- 6 8 0 8 -1 -1 -262144
@@ -10,40 +10,16 @@
 #X obj 74 -16 spigot 0;
 #X obj -40 23 loadbang;
 #X obj -40 46 s \$0-init;
-#X obj 102 102 iemgui/iem_image /home/sad/00.Pd/projects/_Xth-Sense/dev/images/circ.button.off.gif
-0 0 empty empty;
-#X obj 124 103 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0.4 0 8 0 8 -128992
+#X obj 102 102 iemgui/iem_image 0 0 0 empty empty;
+#X obj 124 103 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0.01 0 8 0 8 -128992
 -128992 -262144 0 1;
-#N canvas 125 137 238 225 animation 0;
+#N canvas 137 183 238 225 animation 0;
 #X obj 29 36 inlet on.off;
 #X msg 29 167 open \$1;
 #X obj 29 58 sel 1 0;
 #X obj 118 57 r \$0-init;
 #X obj 29 192 outlet open.image;
-#N canvas 18 93 349 270 find-image-on 0;
-#X obj 60 195 mergefilename /;
-#X obj 105 112 symbol images/circ.button.on.gif;
-#X msg 60 164 \$1 \$2;
-#X obj 60 139 pack s s;
-#X obj 72 33 loadbang;
-#X obj 60 61 t b b;
-#X obj 38 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 60 225 outlet;
-#X obj 60 11 inlet;
-#X obj 60 84 getdir 3;
-#X connect 0 0 7 0;
-#X connect 1 0 3 1;
-#X connect 2 0 0 0;
-#X connect 3 0 2 0;
-#X connect 4 0 5 0;
-#X connect 5 0 9 0;
-#X connect 5 1 1 0;
-#X connect 6 0 5 0;
-#X connect 8 0 5 0;
-#X connect 9 0 3 0;
-#X restore 29 112 pd find-image-on;
-#N canvas 24 116 349 270 find-image-off 0;
+#N canvas 30 139 349 270 find-image-on 0;
 #X obj 60 195 mergefilename /;
 #X msg 60 164 \$1 \$2;
 #X obj 60 139 pack s s;
@@ -53,18 +29,41 @@
 -1;
 #X obj 60 225 outlet;
 #X obj 60 11 inlet;
-#X obj 105 112 symbol images/circ.button.off.gif;
-#X obj 60 84 getdir 3;
+#X obj 60 84 getdir 4;
+#X obj 105 112 symbol ../images/circ.button.on.gif;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
-#X connect 4 0 9 0;
-#X connect 4 1 8 0;
+#X connect 4 0 8 0;
+#X connect 4 1 9 0;
 #X connect 5 0 4 0;
 #X connect 7 0 4 0;
-#X connect 8 0 2 1;
-#X connect 9 0 2 0;
+#X connect 8 0 2 0;
+#X connect 9 0 2 1;
+#X restore 29 112 pd find-image-on;
+#N canvas 36 162 349 270 find-image-off 0;
+#X obj 60 195 mergefilename /;
+#X msg 60 164 \$1 \$2;
+#X obj 60 139 pack s s;
+#X obj 72 33 loadbang;
+#X obj 60 61 t b b;
+#X obj 38 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 60 225 outlet;
+#X obj 60 11 inlet;
+#X obj 60 84 getdir 4;
+#X obj 105 112 symbol ../images/circ.button.off.gif;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 8 0;
+#X connect 4 1 9 0;
+#X connect 5 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 2 0;
+#X connect 9 0 2 1;
 #X restore 48 88 pd find-image-off;
 #X obj 6 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
