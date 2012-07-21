@@ -1,4 +1,4 @@
-#N canvas 452 241 708 461 10;
+#N canvas 458 264 708 461 10;
 #X obj 35 99 utils.rec.mono~;
 #X obj 31 184 utils.rec.mono~ name-of-the-folder;
 #X text 278 283 ARGUMENT;
@@ -21,11 +21,9 @@ working \; on lives in a folder called COOLSTUFF. Inside this folder
 \; you want to create a subfolder called RECORDINGS \; Then \, add
 [utils.rec.mono~ RECORDINGS] to your patch \; (specifying RECORDINGS
 as an argument) and you are done.;
-#X text 278 168 [utils.rec.mono~] will automatically name the recorded
-\; files in chronological order. However \, it does not \; includes
-timestamp. Which means that when you close your \; patch is better
-to move the recorded files in another \; folder \, otherwise next time
-they will be overwritten.;
+#X text 279 170 [utils.rec.mono~] will automatically name the recorded
+\; files in chronological order AND it will add a timestamp \; this
+way you will never overwrite a previous recording.;
 #X connect 0 0 7 0;
 #X connect 8 0 0 0;
 #X connect 9 0 0 1;

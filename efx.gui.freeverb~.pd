@@ -1,4 +1,4 @@
-#N canvas 670 214 807 409 10;
+#N canvas 676 237 807 409 10;
 #X obj -261 114 inlet~;
 #X obj -308 113 inlet~;
 #N canvas 698 189 528 427 dsp 0;
@@ -83,6 +83,21 @@
 #X obj 101 370 s \$0-freeze;
 #X obj 101 348 s \$0-mix;
 #X obj 287 44 inlet mix;
+#N canvas 127 251 450 300 workaround 0;
+#X obj 107 52 noise~;
+#X obj 154 111 dbtorms;
+#X msg 154 83 1;
+#X obj 185 84 init 1;
+#X obj 107 147 *~ 0.01;
+#X floatatom 171 137 12 0 0 0 - - -;
+#X obj 108 181 outlet~;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X restore -170 74 pd workaround;
 #X connect 0 0 2 1;
 #X connect 0 0 6 1;
 #X connect 1 0 2 0;
@@ -118,4 +133,8 @@
 #X connect 24 1 28 1;
 #X connect 28 0 24 0;
 #X connect 36 0 24 0;
+#X connect 37 0 2 0;
+#X connect 37 0 2 1;
+#X connect 37 0 6 0;
+#X connect 37 0 6 1;
 #X coords 0 -1 1 1 157 117 2 100 100;

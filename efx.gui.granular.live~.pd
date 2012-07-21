@@ -1,4 +1,4 @@
-#N canvas 127 134 1332 659 10;
+#N canvas 145 183 1332 659 10;
 #X obj 522 203 loadbang;
 #X obj 579 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -316,10 +316,10 @@
 #X floatatom 941 -77 5 0 0 0 - - -;
 #X obj 933 -9 *;
 #X obj 1079 -94 hsl 128 15 1 2000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 1000 1;
 #X floatatom 1095 -67 5 0 0 0 - - -;
 #X obj 921 54 hsl 128 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 1100 1;
 #X floatatom 937 81 5 0 0 0 - - -;
 #X obj 918 130 * 44100;
 #X obj 1080 53 hsl 128 15 1 2 0 0 empty empty empty -2 -8 0 10 -262144
@@ -511,6 +511,7 @@
 #X obj 297 261 xsssad \$1/gr.drtn;
 #X obj 298 285 xsssad \$1/gr.pitch;
 #X obj 298 309 xsssad \$1/gr.mix;
+#X obj 298 335 xsssad \$1/gr.play;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 3 0 5 0;
@@ -551,6 +552,7 @@
 #X connect 39 0 20 0;
 #X connect 40 0 21 0;
 #X connect 41 0 11 0;
+#X connect 48 0 81 1;
 #X connect 49 0 50 0;
 #X connect 49 0 51 0;
 #X connect 50 0 25 0;
@@ -561,6 +563,7 @@
 #X connect 55 0 78 2;
 #X connect 55 0 79 2;
 #X connect 55 0 80 2;
+#X connect 55 0 81 2;
 #X connect 56 0 63 0;
 #X connect 57 0 64 0;
 #X connect 58 0 65 0;
@@ -589,4 +592,5 @@
 #X connect 78 0 64 0;
 #X connect 79 0 65 0;
 #X connect 80 0 66 0;
+#X connect 81 0 48 0;
 #X coords 0 -1 1 1 156 100 2 100 100;
