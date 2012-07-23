@@ -1,0 +1,37 @@
+#N canvas 754 249 777 468 10;
+#X text 348 139 ARGUMENT;
+#X text 349 307 OUTLETS;
+#X text 349 175 Label;
+#X text 350 241 INLETS;
+#X text 350 337 Values normalized to MIDI;
+#X text 350 322 Values normalized to user input;
+#X msg 102 17 120;
+#X floatatom 62 17 5 0 127 0 - - -;
+#X text 350 257 Float;
+#X text 351 273 Label;
+#X floatatom 64 318 5 0 0 0 - - -;
+#X text 63 263 Below a custom range between 500 and 30;
+#X text 349 189 Range top value;
+#X text 349 204 Range bottom value;
+#X floatatom 63 233 5 0 0 0 - - -;
+#X text 63 181 Below a custom range between 30 and 500;
+#X floatatom 62 88 5 0 0 0 - - -;
+#X msg 226 23 cat;
+#X obj 62 55 gui.slider.2map /wp1/1;
+#X obj 62 132 gui.slider.2map /wp1/2 volume;
+#X obj 63 212 gui.slider.2map /wp1/3 test1 500 30;
+#X obj 64 296 gui.slider.2map /wp1/4 test 30 500;
+#X text 345 9 Exactly the same GUI slider \; with customizable range
+(via arguments) \; BUT this is specifically designed to be mapped \;
+within the Xth Sense main software (just like \; the efx.gui... objects).
+;
+#X text 349 160 /wp1/1 (or wp2 \, just as you do with the efx.gui objects)
+;
+#X text 345 80 WARNING: mapping will not work unless you specify a
+label \; (i.e. the second argument);
+#X connect 6 0 18 0;
+#X connect 7 0 18 0;
+#X connect 17 0 18 1;
+#X connect 18 0 16 0;
+#X connect 20 0 14 0;
+#X connect 21 0 10 0;
