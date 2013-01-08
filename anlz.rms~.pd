@@ -1,11 +1,14 @@
-#N canvas 914 375 300 169 10;
+#N canvas 942 348 427 232 10;
 #X obj 100 101 nbx 8 16 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 8
--1 -262144 -1 0.346772 256;
+-1 -262144 -1 0.971001 256;
 #X obj 163 101 cnv 16 30 16 empty empty rms 10 8 0 8 -1 -262144 0;
 #X obj 99 13 inlet~;
 #X obj 100 70 scale.lin 1 0 100;
 #X obj 100 130 outlet;
-#X obj 100 38 env~ 512;
+#X obj 100 38 env~ 512 256;
+#X text 239 28 256 is sample \; sampling period is \; 5.8ms;
+#X text 237 81 Thus \, sampling rate is \; 1000 ms / 5.8 ms = 172Hz
+;
 #X connect 0 0 4 0;
 #X connect 2 0 5 0;
 #X connect 3 0 0 0;

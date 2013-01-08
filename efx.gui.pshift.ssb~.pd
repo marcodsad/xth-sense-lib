@@ -1,4 +1,4 @@
-#N canvas 585 286 810 556 10;
+#N canvas 591 286 810 556 10;
 #X obj -155 49 inlet~;
 #X obj -124 70 inlet~;
 #N canvas 728 395 610 447 dsp 0;
@@ -59,8 +59,8 @@
 #X obj 432 117 loadbang;
 #X obj 304 100 s \$0-pitch;
 #X obj 304 120 s \$0-mix;
-#X obj 100 26 inlet pitch;
-#X obj 120 51 inlet mix;
+#X obj 77 30 inlet pitch;
+#X obj 159 31 inlet mix;
 #X obj 100 117 gui.slider pitch 8000 0;
 #X obj 100 134 gui.slider mix 1 -1;
 #X obj 100 100 cnv 15 156 15 empty empty Pshift.ssb 5 8 0 8 -1 -162280

@@ -1,4 +1,4 @@
-#N canvas 437 215 947 627 10;
+#N canvas 443 215 947 627 10;
 #X obj 100 100 cnv 15 33 70 empty empty empty 20 7 0 8 -1 -262144 0
 ;
 #X obj 496 87 inlet bpm;
@@ -14,7 +14,7 @@
 #X text 511 396 At the heart of many audio scenes or musica constructions
 is a timebase to drive events.;
 #X obj 102 121 nbx 3 14 1 1e+37 0 0 empty empty empty 0 -8 0 8 -1 -262144
--1 120 256;
+-1 60 256;
 #X obj 101 137 nbx 3 14 1 4 0 0 empty empty empty 0 -8 0 8 -1 -262144
 -1 2 256;
 #X obj 102 154 nbx 3 14 0 100 0 0 empty empty empty 0 -8 0 8 -1 -262144
@@ -58,7 +58,7 @@ is a timebase to drive events.;
 #X obj 811 122 f \$3;
 #X obj 811 184 + 1;
 #X obj 583 -19 t b b b;
-#N canvas 0 0 450 300 init 0;
+#N canvas 6 47 450 300 init 0;
 #X obj 157 93 loadbang;
 #X obj 157 116 s \$0-init;
 #X connect 0 0 1 0;
@@ -69,12 +69,12 @@ is a timebase to drive events.;
 #X msg 318 -22 2;
 #X msg 382 -21 1;
 #X obj 252 -42 r \$0-init;
-#X msg 252 -21 120;
 #X text 426 10 cntrl_dimen 150 40;
 #X obj 255 523 s TIME.BARS;
 #X obj 535 523 s TIME.BANGS;
 #X obj 9 37 r NOGUI.START;
 #X obj 34 444 outlet TRIGGER;
+#X msg 252 -21 60;
 #X connect 1 0 48 0;
 #X connect 2 0 4 0;
 #X connect 3 0 50 0;
@@ -89,7 +89,7 @@ is a timebase to drive events.;
 #X connect 13 0 22 0;
 #X connect 14 0 23 0;
 #X connect 15 0 16 0;
-#X connect 15 0 65 0;
+#X connect 15 0 64 0;
 #X connect 17 0 7 0;
 #X connect 17 0 42 0;
 #X connect 24 0 48 0;
@@ -109,9 +109,9 @@ is a timebase to drive events.;
 #X connect 37 0 38 1;
 #X connect 38 0 37 0;
 #X connect 38 0 10 0;
-#X connect 38 0 62 0;
+#X connect 38 0 61 0;
 #X connect 39 0 9 0;
-#X connect 39 0 63 0;
+#X connect 39 0 62 0;
 #X connect 39 1 38 0;
 #X connect 40 0 39 0;
 #X connect 41 0 39 0;
@@ -139,7 +139,7 @@ is a timebase to drive events.;
 #X connect 56 0 52 0;
 #X connect 57 0 13 0;
 #X connect 58 0 14 0;
-#X connect 59 0 60 0;
-#X connect 60 0 12 0;
-#X connect 64 0 15 0;
+#X connect 59 0 65 0;
+#X connect 63 0 15 0;
+#X connect 65 0 12 0;
 #X coords 0 -1 1 1 33 70 2 100 100;
