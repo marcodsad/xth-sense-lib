@@ -1,4 +1,4 @@
-#N canvas 674 191 787 462 10;
+#N canvas 260 135 787 462 10;
 #X obj 310 113 inlet~ signal;
 #X obj 364 10 inlet control;
 #X obj 309 317 *~;
@@ -12,7 +12,7 @@
 #X obj 427 208 *~ 0.25;
 #X obj 428 229 -~ 0.25;
 #X obj 324 265 -~ 0.25;
-#X obj 100 117 gui.slider pan 1 0;
+#X obj 100 118 gui.slider pan 1 0;
 #X obj 111 47 r \$1/cos.pan;
 #X obj 100 100 cnv 15 156 15 empty empty Pan.cos.mono 5 8 0 8 -1 -162280
 0;
@@ -22,7 +22,7 @@
 #X msg 308 83 set \$1;
 #X obj 364 34 t f f;
 #X obj 470 48 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1100 1;
+-1 -1 0 1;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
 #X connect 1 0 20 0;
@@ -42,8 +42,8 @@
 #X connect 16 0 13 0;
 #X connect 17 0 20 0;
 #X connect 18 0 19 0;
-#X connect 19 0 13 0;
 #X connect 20 0 18 0;
+#X connect 20 0 13 0;
 #X connect 20 1 6 0;
 #X connect 21 0 20 0;
 #X coords 0 -1 1 1 156 33 2 100 100;

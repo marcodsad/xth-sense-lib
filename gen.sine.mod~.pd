@@ -1,4 +1,4 @@
-#N canvas 129 238 714 511 10;
+#N canvas 141 238 714 511 10;
 #X obj 163 -71 inlet carFreq;
 #X obj 263 -72 inlet mod;
 #X obj 84 -71 inlet vol;
@@ -209,7 +209,7 @@
 #X obj 10 44 gui.radio.tgl;
 #X obj 10 10 cnv 15 156 15 empty empty Sine.mod 5 8 0 8 -1 -162280
 0;
-#N canvas 730 147 643 545 dsp 0;
+#N canvas 736 147 643 545 dsp 0;
 #X obj 391 180 *~;
 #X obj 448 248 *~;
 #X obj 448 322 fdn~ 64 40000;
@@ -319,6 +319,8 @@
 #X obj -129 -32 r \$1/smod.mod;
 #X obj 108 249 xsssad \$1/smod.frq;
 #X obj -129 -56 r \$1/smod.frq;
+#X text 103 -127 Frequency modulator (FM) synthesiser;
+#X obj -3 -71 inlet on.off;
 #X connect 0 0 12 0;
 #X connect 1 0 13 0;
 #X connect 2 0 11 1;
@@ -337,7 +339,7 @@
 #X connect 16 0 19 0;
 #X connect 16 1 18 0;
 #X connect 21 0 11 1;
-#X connect 22 0 11 2;
+#X connect 22 0 11 1;
 #X connect 23 0 13 0;
 #X connect 24 0 11 0;
 #X connect 25 0 14 1;
@@ -348,4 +350,5 @@
 #X connect 30 0 13 0;
 #X connect 31 0 12 0;
 #X connect 32 0 12 0;
+#X connect 34 0 11 0;
 #X coords 0 -1 1 1 156 83 1 10 10;
