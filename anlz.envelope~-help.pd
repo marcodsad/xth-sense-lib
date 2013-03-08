@@ -1,0 +1,18 @@
+#N canvas 534 297 469 453 10;
+#X obj 42 95 noise~;
+#X floatatom 129 99 5 0 0 0 - - -;
+#X obj 42 140 anlz.envelope~;
+#X floatatom 42 185 5 0 0 0 - - -;
+#X text 210 28 It translates an audio input into \; control values.
+Similar to anlz.snap \; but this one has a lo-pass filter \; that smooth
+the values \, and report \; a nice envelope.;
+#X text 211 141 ARGUMENTS_;
+#X text 210 265 OUTLET;
+#X text 210 215 Audio input;
+#X text 210 199 INLETS;
+#X text 211 161 None;
+#X text 210 230 Speed in ms;
+#X text 210 281 Control values;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;

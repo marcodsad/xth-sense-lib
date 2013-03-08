@@ -1,0 +1,33 @@
+#N canvas 126 202 487 449 10;
+#X obj 101 101 nbx 8 16 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 8
+-1 -262144 -1 0 256;
+#X obj 164 101 cnv 16 30 16 empty empty rms 10 8 0 8 -1 -262144 0;
+#X obj 101 130 outlet;
+#X obj 100 -128 inlet~;
+#X obj 100 -102 *~;
+#X text 133 -100 square the signal;
+#X text 243 175 from: H06.envelope.follower \; Pd help files;
+#X obj 100 -72 lop~ 10;
+#X text 155 -73 responsiveness;
+#X obj 101 42 snapshot~;
+#X obj 101 69 sqrt;
+#X obj 119 16 r metro;
+#X obj 227 -15 metro 250;
+#X obj 227 -40 loadbang;
+#X obj 227 7 s metro;
+#X obj 284 -38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 346 -58 inlet speed;
+#X connect 0 0 2 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 7 0;
+#X connect 7 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 11 0 9 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 1;
+#X coords 0 -1 1 1 94 18 2 100 100;

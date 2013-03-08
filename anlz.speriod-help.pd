@@ -1,0 +1,10 @@
+#N canvas 836 344 537 332 10;
+#X obj 49 102 anlz.speriod;
+#X floatatom 49 65 5 0 0 0 - - -;
+#X text 182 51 This can be used to monitor the sampling \; period of
+a stream of values \; most likely \; you want to plug into its inlet
+the data \; received from a sensor to check whether \; the stream is
+reported in a steady period \; It prints the time between each value
+\; in the console window. The more the values \; are similar \, the
+steadier the sampling period.;
+#X connect 1 0 0 0;
