@@ -1,4 +1,4 @@
-#N canvas 443 215 947 627 10;
+#N canvas 446 215 947 627 10;
 #X obj 100 100 cnv 15 33 70 empty empty empty 20 7 0 8 -1 -262144 0
 ;
 #X obj 496 87 inlet bpm;
@@ -14,7 +14,7 @@
 #X text 511 396 At the heart of many audio scenes or musica constructions
 is a timebase to drive events.;
 #X obj 102 121 nbx 3 14 1 1e+37 0 0 empty empty empty 0 -8 0 8 -1 -262144
--1 60 256;
+-1 120 256;
 #X obj 101 137 nbx 3 14 1 4 0 0 empty empty empty 0 -8 0 8 -1 -262144
 -1 2 256;
 #X obj 102 154 nbx 3 14 0 100 0 0 empty empty empty 0 -8 0 8 -1 -262144
@@ -74,7 +74,7 @@ is a timebase to drive events.;
 #X obj 535 523 s TIME.BANGS;
 #X obj 9 37 r NOGUI.START;
 #X obj 34 444 outlet TRIGGER;
-#X msg 252 -21 60;
+#X msg 252 -21 120;
 #X connect 1 0 48 0;
 #X connect 2 0 4 0;
 #X connect 3 0 50 0;
